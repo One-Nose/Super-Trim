@@ -5788,8 +5788,8 @@
     "texture": "minecraft:item/spawn_egg"
   },
   {
-    "name": "bamboo_mosaic_spawn_egg",
-    "model": "bamboo_mosaic_spawn_egg",
+    "name": "bamboo_mosaic",
+    "model": "bamboo_mosaic",
     "texture": "minecraft:block/bamboo_mosaic"
   },
   {
@@ -5846,6 +5846,16 @@
     "name": "bamboo_stairs",
     "model": "bamboo_stairs",
     "texture": "minecraft:block/bamboo_planks"
+  },
+  {
+    "name": "bamboo_mosaic_slab",
+    "model": "bamboo_mosaic_slab",
+    "texture": "minecraft:block/bamboo_mosaic"
+  },
+  {
+    "name": "bamboo_mosaic_stairs",
+    "model": "bamboo_mosaic_stairs",
+    "texture": "minecraft:block/bamboo_mosaic"
   },
   {
     "name": "bamboo_trapdoor",
@@ -5921,5 +5931,65 @@
     "name": "bamboo_chest_raft",
     "model": "bomboo_chest_raft",
     "texture": "minecraft:item/bamboo_chest_raft"
+  },
+  {
+    "name": "netherite_upgrade_smithing_template",
+    "model": "netherite_upgrade_smithing_template",
+    "texture": "minecraft:item/netherite_upgrade_smithing_template"
+  },
+  {
+    "name": "sentry_armor_trim_smithing_template",
+    "model": "sentry_armor_trim_smithing_template",
+    "texture": "minecraft:item/sentry_armor_trim_smithing_template"
+  },
+  {
+    "name": "dune_armor_trim_smithing_template",
+    "model": "dune_armor_trim_smithing_template",
+    "texture": "minecraft:item/dune_armor_trim_smithing_template"
+  },
+  {
+    "name": "coast_armor_trim_smithing_template",
+    "model": "coast_armor_trim_smithing_template",
+    "texture": "minecraft:item/coast_armor_trim_smithing_template"
+  },
+  {
+    "name": "wild_armor_trim_smithing_template",
+    "model": "wild_armor_trim_smithing_template",
+    "texture": "minecraft:item/wild_armor_trim_smithing_template"
+  },
+  {
+    "name": "ward_armor_trim_smithing_template",
+    "model": "ward_armor_trim_smithing_template",
+    "texture": "minecraft:item/ward_armor_trim_smithing_template"
+  },
+  {
+    "name": "eye_armor_trim_smithing_template",
+    "model": "eye_armor_trim_smithing_template",
+    "texture": "minecraft:item/eye_armor_trim_smithing_template"
+  },
+  {
+    "name": "vex_armor_trim_smithing_template",
+    "model": "vex_armor_trim_smithing_template",
+    "texture": "minecraft:item/vex_armor_trim_smithing_template"
+  },
+  {
+    "name": "tide_armor_trim_smithing_template",
+    "model": "tide_armor_trim_smithing_template",
+    "texture": "minecraft:item/tide_armor_trim_smithing_template"
+  },
+  {
+    "name": "snout_armor_trim_smithing_template",
+    "model": "snout_armor_trim_smithing_template",
+    "texture": "minecraft:item/snout_armor_trim_smithing_template"
+  },
+  {
+    "name": "rib_armor_trim_smithing_template",
+    "model": "rib_armor_trim_smithing_template",
+    "texture": "minecraft:item/rib_armor_trim_smithing_template"
+  },
+  {
+    "name": "spire_armor_trim_smithing_template",
+    "model": "spire_armor_trim_smithing_template",
+    "texture": "minecraft:item/spire_armor_trim_smithing_template"
   }
 ]

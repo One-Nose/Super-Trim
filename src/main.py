@@ -1,13 +1,14 @@
 from json import dump, load
 from os import makedirs, mkdir
 from os.path import join
-from shutil import rmtree
+from shutil import rmtree, copyfile
+from typing import Iterable
 
 from PIL import Image
 
 
 def color_palette(texture: str) -> Image:
-    data = sorted(colors(texture), key=sum, reverse=True)
+    data = sorted(colors(texture), key=lambda c: sum(c), reverse=True)
 
     if len(data) == 1:
         data = list(data) * 8
@@ -20,14 +21,14 @@ def color_palette(texture: str) -> Image:
     while len(data) < 8:
         pixels = max(zip(data, data[1:]), key=lambda ps: sum(ps[0]) - sum(ps[1]))
         index = data.index(pixels[1])
-        data.insert(index, tuple(c[1] + (c[0]-c[1]) // 2 for c in zip(*pixels)))
+        data.insert(index, tuple(c[1] + (c[0]-c[1]) // 2 for c in zip(pixels[0], pixels[1])))
 
     result = Image.new('RGBA', (8, 1))
     result.putdata(data)
     return result
 
 
-def colors(texture: str) -> tuple[tuple[int]]:
+def colors(texture: str) -> set[tuple[int]]:
     with Image.open(texture) as image:
         data = image.convert('RGBA').getdata()
     return set(filter(lambda p: p[3] > 0, data))
@@ -36,10 +37,10 @@ def colors(texture: str) -> tuple[tuple[int]]:
 def create_atlas(path: str) -> None:
     with open('../minecraft/atlases/armor_trims.json') as file:
         atlas = load(file)
-    
+
     permutations = atlas['sources'][0]['permutations']
     for item in items():
-        permutations[item['name']] = join('super_trim:trims/color_palettes', item['name'])
+        permutations[item['name']] = f"super_trim:trims/color_palettes/{item['name']}"
 
     with open(path, 'x') as file:
         dump(atlas, file, indent=2)
@@ -54,27 +55,46 @@ def create_color_palettes(path: str) -> None:
 
 
 def create_datapack(path: str) -> None:
+    print('Preparing datapack...')
     refresh_dir(path)
 
-    create_mcmeta(path, 11)
+    print('Creating pack.mcmeta...')
+    create_mcmeta(path, 'Enables all items as armor trimming materials', 11)
 
+    print('Creating trim_materials.json...')
     makedirs(join(path, 'data/minecraft/tags/items'))
     create_tag(join(path, 'data/minecraft/tags/items/trim_materials.json'))
 
+    print('Creating materials...')
     makedirs(join(path, 'data/super_trim/trim_material'))
     for item in items():
         create_material(join(path, 'data/super_trim/trim_material'), item)
 
+    print('Creating pack.png...')
+    copyfile('../pack.png', join(path, 'pack.png'))
+
+    print('Datapack ready')
+
 
 def create_lang(path: str) -> None:
-    lang = {}
+    with open('../minecraft/lang/en_us.json') as file:
+        lang = load(file)
+
+    result = {}
 
     for item in items():
-        display_name = item['name'].replace('_', ' ').title()
-        lang[f"trim_material.minecraft.{item['name']}"] = f'{display_name} Material'
+        try:
+            display_name = lang[f"item.minecraft.{item['name']}"]
+        except KeyError:
+            if item['name'].endswith('_smithing_template'):
+                display_name = 'Smithing Template'
+            else:
+                display_name = lang[f"block.minecraft.{item['name']}"]
+
+        result[f"trim_material.minecraft.{item['name']}"] = f'{display_name} Material'
     
     with open(path, 'x') as file:
-        dump(lang, file, indent=2)
+        dump(result, file, indent=2)
 
 
 def create_material(path: str, item: dict[str, str]) -> None:
@@ -95,29 +115,39 @@ def create_material(path: str, item: dict[str, str]) -> None:
         dump(material, file, indent=2)
 
 
-def create_mcmeta(path: str, pack_format: int) -> None:
+def create_mcmeta(path: str, description: str, pack_format: int) -> None:
     with open(join(path, 'pack.mcmeta'), 'x') as file:
         dump({
             'pack': {
-                'description': 'Enables all items as armor trimming materials',
+                'description': description,
                 'pack_format': pack_format
             }
         }, file, indent=2)
 
 
 def create_resourcepack(path: str) -> None:
+    print('Preparing resource pack...')
     refresh_dir(path)
 
-    create_mcmeta(path, 12)
+    print('Creating pack.mcmeta...')
+    create_mcmeta(path, 'Resource pack for the Super Trim data pack', 12)
 
+    print('Creating armor_trims.json...')
     makedirs(join(path, 'assets/minecraft/atlases'))
     create_atlas(join(path, 'assets/minecraft/atlases/armor_trims.json'))
 
+    print('Creating color palettes...')
     makedirs(join(path, 'assets/super_trim/textures/trims/color_palettes'))
     create_color_palettes(join(path, 'assets/super_trim/textures/trims/color_palettes'))
 
+    print('Creating en_us.json...')
     makedirs(join(path, 'assets/minecraft/lang'))
     create_lang(join(path, 'assets/minecraft/lang', 'en_us.json'))
+
+    print('Creating pack.png...')
+    copyfile('../pack.png', join(path, 'pack.png'))
+
+    print('Resource pack ready')
 
 
 def create_tag(path: str) -> None:
@@ -129,7 +159,7 @@ def create_tag(path: str) -> None:
         dump(tag, file, indent=2)
 
 
-def items() -> list[dict[str, str]]:
+def items() -> Iterable[dict[str, str]]:
     with open('../update_1_20/data/minecraft/tags/items/trim_materials.json') as file:
         blacklist: list[str] = load(file)['values']
     blacklist.append('minecraft:air')

@@ -1146,7 +1146,7 @@
     "minecraft:snow_golem_spawn_egg",
     "minecraft:wither_spawn_egg",
     "minecraft:camel_spawn_egg",
-    "minecraft:bamboo_mosaic_spawn_egg",
+    "minecraft:bamboo_mosaic",
     "minecraft:bamboo_block",
     "minecraft:stripped_bamboo_block",
     "minecraft:bamboo_button",
@@ -1158,6 +1158,8 @@
     "minecraft:bamboo_sign",
     "minecraft:bamboo_slab",
     "minecraft:bamboo_stairs",
+    "minecraft:bamboo_mosaic_slab",
+    "minecraft:bamboo_mosaic_stairs",
     "minecraft:bamboo_trapdoor",
     "minecraft:chiseled_bookshelf",
     "minecraft:oak_hanging_sign",
@@ -1172,6 +1174,18 @@
     "minecraft:bamboo_hanging_sign",
     "minecraft:piglin_head",
     "minecraft:bamboo_raft",
-    "minecraft:bamboo_chest_raft"
+    "minecraft:bamboo_chest_raft",
+    "minecraft:netherite_upgrade_smithing_template",
+    "minecraft:sentry_armor_trim_smithing_template",
+    "minecraft:dune_armor_trim_smithing_template",
+    "minecraft:coast_armor_trim_smithing_template",
+    "minecraft:wild_armor_trim_smithing_template",
+    "minecraft:ward_armor_trim_smithing_template",
+    "minecraft:eye_armor_trim_smithing_template",
+    "minecraft:vex_armor_trim_smithing_template",
+    "minecraft:tide_armor_trim_smithing_template",
+    "minecraft:snout_armor_trim_smithing_template",
+    "minecraft:rib_armor_trim_smithing_template",
+    "minecraft:spire_armor_trim_smithing_template"
   ]
 }
