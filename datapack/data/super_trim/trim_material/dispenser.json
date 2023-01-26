@@ -1,0 +1,9 @@
+{
+  "asset_name": "dispenser",
+  "description": {
+    "color": "#727272",
+    "translate": "trim_material.minecraft.dispenser"
+  },
+  "ingredient": "minecraft:dispenser",
+  "item_model_index": 1.0
+}

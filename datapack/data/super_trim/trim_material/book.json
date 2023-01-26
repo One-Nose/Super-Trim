@@ -1,0 +1,9 @@
+{
+  "asset_name": "book",
+  "description": {
+    "color": "#685B47",
+    "translate": "trim_material.minecraft.book"
+  },
+  "ingredient": "minecraft:book",
+  "item_model_index": 1.0
+}

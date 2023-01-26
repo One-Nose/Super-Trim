@@ -1,0 +1,9 @@
+{
+  "asset_name": "rooted_dirt",
+  "description": {
+    "color": "#8F6E5A",
+    "translate": "trim_material.minecraft.rooted_dirt"
+  },
+  "ingredient": "minecraft:rooted_dirt",
+  "item_model_index": 1.0
+}

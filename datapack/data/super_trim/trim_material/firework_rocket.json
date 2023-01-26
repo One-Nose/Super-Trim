@@ -1,0 +1,9 @@
+{
+  "asset_name": "firework_rocket",
+  "description": {
+    "color": "#9D504F",
+    "translate": "trim_material.minecraft.firework_rocket"
+  },
+  "ingredient": "minecraft:firework_rocket",
+  "item_model_index": 1.0
+}

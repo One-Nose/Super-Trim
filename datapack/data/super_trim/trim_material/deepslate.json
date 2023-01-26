@@ -1,0 +1,9 @@
+{
+  "asset_name": "deepslate",
+  "description": {
+    "color": "#58585A",
+    "translate": "trim_material.minecraft.deepslate"
+  },
+  "ingredient": "minecraft:deepslate",
+  "item_model_index": 1.0
+}

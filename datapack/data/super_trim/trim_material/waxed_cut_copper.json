@@ -1,0 +1,9 @@
+{
+  "asset_name": "waxed_cut_copper",
+  "description": {
+    "color": "#BE6A4F",
+    "translate": "trim_material.minecraft.waxed_cut_copper"
+  },
+  "ingredient": "minecraft:waxed_cut_copper",
+  "item_model_index": 1.0
+}

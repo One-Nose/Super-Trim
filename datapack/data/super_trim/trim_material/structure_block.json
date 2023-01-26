@@ -1,0 +1,9 @@
+{
+  "asset_name": "structure_block",
+  "description": {
+    "color": "#7B697B",
+    "translate": "trim_material.minecraft.structure_block"
+  },
+  "ingredient": "minecraft:structure_block",
+  "item_model_index": 1.0
+}

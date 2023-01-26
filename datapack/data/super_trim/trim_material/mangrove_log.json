@@ -1,0 +1,9 @@
+{
+  "asset_name": "mangrove_log",
+  "description": {
+    "color": "#5E3629",
+    "translate": "trim_material.minecraft.mangrove_log"
+  },
+  "ingredient": "minecraft:mangrove_log",
+  "item_model_index": 1.0
+}

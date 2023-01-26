@@ -1,0 +1,9 @@
+{
+  "asset_name": "light_blue_terracotta",
+  "description": {
+    "color": "#726C8A",
+    "translate": "trim_material.minecraft.light_blue_terracotta"
+  },
+  "ingredient": "minecraft:light_blue_terracotta",
+  "item_model_index": 1.0
+}

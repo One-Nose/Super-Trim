@@ -1,0 +1,9 @@
+{
+  "asset_name": "bow",
+  "description": {
+    "color": "#61543C",
+    "translate": "trim_material.minecraft.bow"
+  },
+  "ingredient": "minecraft:bow",
+  "item_model_index": 1.0
+}

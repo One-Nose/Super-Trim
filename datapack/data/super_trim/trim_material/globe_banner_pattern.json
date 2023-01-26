@@ -1,0 +1,9 @@
+{
+  "asset_name": "globe_banner_pattern",
+  "description": {
+    "color": "#9D8C75",
+    "translate": "trim_material.minecraft.globe_banner_pattern"
+  },
+  "ingredient": "minecraft:globe_banner_pattern",
+  "item_model_index": 1.0
+}

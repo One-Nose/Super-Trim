@@ -1,0 +1,9 @@
+{
+  "asset_name": "dark_prismarine",
+  "description": {
+    "color": "#355E4E",
+    "translate": "trim_material.minecraft.dark_prismarine"
+  },
+  "ingredient": "minecraft:dark_prismarine",
+  "item_model_index": 1.0
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "crimson_hanging_sign",
+  "description": {
+    "color": "#5E3848",
+    "translate": "trim_material.minecraft.crimson_hanging_sign"
+  },
+  "ingredient": "minecraft:crimson_hanging_sign",
+  "item_model_index": 1.0
+}

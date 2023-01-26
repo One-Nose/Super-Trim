@@ -1,0 +1,9 @@
+{
+  "asset_name": "warped_hyphae",
+  "description": {
+    "color": "#2F5053",
+    "translate": "trim_material.minecraft.warped_hyphae"
+  },
+  "ingredient": "minecraft:warped_hyphae",
+  "item_model_index": 1.0
+}

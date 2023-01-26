@@ -1,0 +1,9 @@
+{
+  "asset_name": "elytra",
+  "description": {
+    "color": "#6C6C78",
+    "translate": "trim_material.minecraft.elytra"
+  },
+  "ingredient": "minecraft:elytra",
+  "item_model_index": 1.0
+}

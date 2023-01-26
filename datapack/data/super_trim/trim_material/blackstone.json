@@ -1,0 +1,9 @@
+{
+  "asset_name": "blackstone",
+  "description": {
+    "color": "#282127",
+    "translate": "trim_material.minecraft.blackstone"
+  },
+  "ingredient": "minecraft:blackstone",
+  "item_model_index": 1.0
+}

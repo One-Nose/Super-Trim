@@ -1,0 +1,9 @@
+{
+  "asset_name": "lantern",
+  "description": {
+    "color": "#B18A5C",
+    "translate": "trim_material.minecraft.lantern"
+  },
+  "ingredient": "minecraft:lantern",
+  "item_model_index": 1.0
+}

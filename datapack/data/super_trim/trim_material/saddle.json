@@ -1,0 +1,9 @@
+{
+  "asset_name": "saddle",
+  "description": {
+    "color": "#8D5539",
+    "translate": "trim_material.minecraft.saddle"
+  },
+  "ingredient": "minecraft:saddle",
+  "item_model_index": 1.0
+}

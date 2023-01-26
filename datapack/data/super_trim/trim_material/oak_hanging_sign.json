@@ -1,0 +1,9 @@
+{
+  "asset_name": "oak_hanging_sign",
+  "description": {
+    "color": "#816D4D",
+    "translate": "trim_material.minecraft.oak_hanging_sign"
+  },
+  "ingredient": "minecraft:oak_hanging_sign",
+  "item_model_index": 1.0
+}

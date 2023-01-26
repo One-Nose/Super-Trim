@@ -1,0 +1,9 @@
+{
+  "asset_name": "crimson_fungus",
+  "description": {
+    "color": "#8B3626",
+    "translate": "trim_material.minecraft.crimson_fungus"
+  },
+  "ingredient": "minecraft:crimson_fungus",
+  "item_model_index": 1.0
+}

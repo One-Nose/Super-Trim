@@ -1,0 +1,9 @@
+{
+  "asset_name": "lava_bucket",
+  "description": {
+    "color": "#AD8E77",
+    "translate": "trim_material.minecraft.lava_bucket"
+  },
+  "ingredient": "minecraft:lava_bucket",
+  "item_model_index": 1.0
+}

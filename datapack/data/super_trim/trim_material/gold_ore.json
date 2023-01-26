@@ -1,0 +1,9 @@
+{
+  "asset_name": "gold_ore",
+  "description": {
+    "color": "#A49668",
+    "translate": "trim_material.minecraft.gold_ore"
+  },
+  "ingredient": "minecraft:gold_ore",
+  "item_model_index": 1.0
+}

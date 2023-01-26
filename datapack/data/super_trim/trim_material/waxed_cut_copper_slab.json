@@ -1,0 +1,9 @@
+{
+  "asset_name": "waxed_cut_copper_slab",
+  "description": {
+    "color": "#BE6A4F",
+    "translate": "trim_material.minecraft.waxed_cut_copper_slab"
+  },
+  "ingredient": "minecraft:waxed_cut_copper_slab",
+  "item_model_index": 1.0
+}

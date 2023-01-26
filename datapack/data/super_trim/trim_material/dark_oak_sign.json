@@ -1,0 +1,9 @@
+{
+  "asset_name": "dark_oak_sign",
+  "description": {
+    "color": "#4A351C",
+    "translate": "trim_material.minecraft.dark_oak_sign"
+  },
+  "ingredient": "minecraft:dark_oak_sign",
+  "item_model_index": 1.0
+}

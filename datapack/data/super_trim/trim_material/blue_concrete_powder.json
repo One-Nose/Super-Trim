@@ -1,0 +1,9 @@
+{
+  "asset_name": "blue_concrete_powder",
+  "description": {
+    "color": "#4649A7",
+    "translate": "trim_material.minecraft.blue_concrete_powder"
+  },
+  "ingredient": "minecraft:blue_concrete_powder",
+  "item_model_index": 1.0
+}

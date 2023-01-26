@@ -1,0 +1,9 @@
+{
+  "asset_name": "magenta_shulker_box",
+  "description": {
+    "color": "#A6319C",
+    "translate": "trim_material.minecraft.magenta_shulker_box"
+  },
+  "ingredient": "minecraft:magenta_shulker_box",
+  "item_model_index": 1.0
+}

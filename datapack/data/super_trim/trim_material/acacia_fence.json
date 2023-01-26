@@ -1,0 +1,9 @@
+{
+  "asset_name": "acacia_fence",
+  "description": {
+    "color": "#A35730",
+    "translate": "trim_material.minecraft.acacia_fence"
+  },
+  "ingredient": "minecraft:acacia_fence",
+  "item_model_index": 1.0
+}

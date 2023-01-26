@@ -1,0 +1,9 @@
+{
+  "asset_name": "dead_tube_coral",
+  "description": {
+    "color": "#7B7471",
+    "translate": "trim_material.minecraft.dead_tube_coral"
+  },
+  "ingredient": "minecraft:dead_tube_coral",
+  "item_model_index": 1.0
+}

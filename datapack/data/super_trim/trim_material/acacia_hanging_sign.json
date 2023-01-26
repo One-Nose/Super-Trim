@@ -1,0 +1,9 @@
+{
+  "asset_name": "acacia_hanging_sign",
+  "description": {
+    "color": "#764C33",
+    "translate": "trim_material.minecraft.acacia_hanging_sign"
+  },
+  "ingredient": "minecraft:acacia_hanging_sign",
+  "item_model_index": 1.0
+}

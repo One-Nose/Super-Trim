@@ -1,0 +1,9 @@
+{
+  "asset_name": "compass",
+  "description": {
+    "color": "#816B6B",
+    "translate": "trim_material.minecraft.compass"
+  },
+  "ingredient": "minecraft:compass",
+  "item_model_index": 1.0
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "bookshelf",
+  "description": {
+    "color": "#9B7C4A",
+    "translate": "trim_material.minecraft.bookshelf"
+  },
+  "ingredient": "minecraft:bookshelf",
+  "item_model_index": 1.0
+}

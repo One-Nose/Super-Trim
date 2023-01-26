@@ -1,0 +1,9 @@
+{
+  "asset_name": "end_crystal",
+  "description": {
+    "color": "#BB779F",
+    "translate": "trim_material.minecraft.end_crystal"
+  },
+  "ingredient": "minecraft:end_crystal",
+  "item_model_index": 1.0
+}

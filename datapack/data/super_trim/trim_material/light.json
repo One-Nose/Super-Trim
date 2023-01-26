@@ -1,0 +1,9 @@
+{
+  "asset_name": "light",
+  "description": {
+    "color": "#FFFB1E",
+    "translate": "trim_material.minecraft.light"
+  },
+  "ingredient": "minecraft:light",
+  "item_model_index": 1.0
+}

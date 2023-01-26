@@ -1,0 +1,9 @@
+{
+  "asset_name": "diamond_horse_armor",
+  "description": {
+    "color": "#7EC386",
+    "translate": "trim_material.minecraft.diamond_horse_armor"
+  },
+  "ingredient": "minecraft:diamond_horse_armor",
+  "item_model_index": 1.0
+}

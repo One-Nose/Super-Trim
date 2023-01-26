@@ -1,0 +1,9 @@
+{
+  "asset_name": "cobweb",
+  "description": {
+    "color": "#E2E7E8",
+    "translate": "trim_material.minecraft.cobweb"
+  },
+  "ingredient": "minecraft:cobweb",
+  "item_model_index": 1.0
+}

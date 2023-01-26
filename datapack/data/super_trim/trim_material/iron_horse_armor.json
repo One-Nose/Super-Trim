@@ -1,0 +1,9 @@
+{
+  "asset_name": "iron_horse_armor",
+  "description": {
+    "color": "#5C4F4F",
+    "translate": "trim_material.minecraft.iron_horse_armor"
+  },
+  "ingredient": "minecraft:iron_horse_armor",
+  "item_model_index": 1.0
+}

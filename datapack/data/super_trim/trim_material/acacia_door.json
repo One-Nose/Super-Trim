@@ -1,0 +1,9 @@
+{
+  "asset_name": "acacia_door",
+  "description": {
+    "color": "#6E4D3D",
+    "translate": "trim_material.minecraft.acacia_door"
+  },
+  "ingredient": "minecraft:acacia_door",
+  "item_model_index": 1.0
+}

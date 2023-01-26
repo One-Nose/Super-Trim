@@ -1,0 +1,9 @@
+{
+  "asset_name": "sunflower",
+  "description": {
+    "color": "#E8AA31",
+    "translate": "trim_material.minecraft.sunflower"
+  },
+  "ingredient": "minecraft:sunflower",
+  "item_model_index": 1.0
+}

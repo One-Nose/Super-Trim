@@ -1,0 +1,9 @@
+{
+  "asset_name": "bubble_coral",
+  "description": {
+    "color": "#9F1B9D",
+    "translate": "trim_material.minecraft.bubble_coral"
+  },
+  "ingredient": "minecraft:bubble_coral",
+  "item_model_index": 1.0
+}

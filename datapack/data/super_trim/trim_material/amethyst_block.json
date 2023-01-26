@@ -1,0 +1,9 @@
+{
+  "asset_name": "amethyst_block",
+  "description": {
+    "color": "#9971C9",
+    "translate": "trim_material.minecraft.amethyst_block"
+  },
+  "ingredient": "minecraft:amethyst_block",
+  "item_model_index": 1.0
+}

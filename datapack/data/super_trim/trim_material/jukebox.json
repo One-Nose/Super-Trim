@@ -1,0 +1,9 @@
+{
+  "asset_name": "jukebox",
+  "description": {
+    "color": "#5C3C29",
+    "translate": "trim_material.minecraft.jukebox"
+  },
+  "ingredient": "minecraft:jukebox",
+  "item_model_index": 1.0
+}

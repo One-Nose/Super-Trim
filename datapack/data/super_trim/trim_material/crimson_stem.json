@@ -1,0 +1,9 @@
+{
+  "asset_name": "crimson_stem",
+  "description": {
+    "color": "#732735",
+    "translate": "trim_material.minecraft.crimson_stem"
+  },
+  "ingredient": "minecraft:crimson_stem",
+  "item_model_index": 1.0
+}

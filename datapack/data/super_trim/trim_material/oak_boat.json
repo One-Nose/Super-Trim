@@ -1,0 +1,9 @@
+{
+  "asset_name": "oak_boat",
+  "description": {
+    "color": "#7D6541",
+    "translate": "trim_material.minecraft.oak_boat"
+  },
+  "ingredient": "minecraft:oak_boat",
+  "item_model_index": 1.0
+}

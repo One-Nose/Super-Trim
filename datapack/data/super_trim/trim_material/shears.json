@@ -1,0 +1,9 @@
+{
+  "asset_name": "shears",
+  "description": {
+    "color": "#85645D",
+    "translate": "trim_material.minecraft.shears"
+  },
+  "ingredient": "minecraft:shears",
+  "item_model_index": 1.0
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "barrel",
+  "description": {
+    "color": "#6E512E",
+    "translate": "trim_material.minecraft.barrel"
+  },
+  "ingredient": "minecraft:barrel",
+  "item_model_index": 1.0
+}

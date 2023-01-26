@@ -1,0 +1,9 @@
+{
+  "asset_name": "amethyst_cluster",
+  "description": {
+    "color": "#B392D2",
+    "translate": "trim_material.minecraft.amethyst_cluster"
+  },
+  "ingredient": "minecraft:amethyst_cluster",
+  "item_model_index": 1.0
+}

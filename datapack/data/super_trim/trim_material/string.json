@@ -1,0 +1,9 @@
+{
+  "asset_name": "string",
+  "description": {
+    "color": "#ABB2B3",
+    "translate": "trim_material.minecraft.string"
+  },
+  "ingredient": "minecraft:string",
+  "item_model_index": 1.0
+}

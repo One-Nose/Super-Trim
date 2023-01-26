@@ -1,0 +1,9 @@
+{
+  "asset_name": "orange_terracotta",
+  "description": {
+    "color": "#A25426",
+    "translate": "trim_material.minecraft.orange_terracotta"
+  },
+  "ingredient": "minecraft:orange_terracotta",
+  "item_model_index": 1.0
+}

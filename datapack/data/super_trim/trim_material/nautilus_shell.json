@@ -1,0 +1,9 @@
+{
+  "asset_name": "nautilus_shell",
+  "description": {
+    "color": "#9F715C",
+    "translate": "trim_material.minecraft.nautilus_shell"
+  },
+  "ingredient": "minecraft:nautilus_shell",
+  "item_model_index": 1.0
+}

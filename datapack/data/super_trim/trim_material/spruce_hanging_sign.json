@@ -1,0 +1,9 @@
+{
+  "asset_name": "spruce_hanging_sign",
+  "description": {
+    "color": "#5A4933",
+    "translate": "trim_material.minecraft.spruce_hanging_sign"
+  },
+  "ingredient": "minecraft:spruce_hanging_sign",
+  "item_model_index": 1.0
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "crimson_roots",
+  "description": {
+    "color": "#7D0828",
+    "translate": "trim_material.minecraft.crimson_roots"
+  },
+  "ingredient": "minecraft:crimson_roots",
+  "item_model_index": 1.0
+}

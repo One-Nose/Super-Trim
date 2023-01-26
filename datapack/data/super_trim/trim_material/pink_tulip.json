@@ -1,0 +1,9 @@
+{
+  "asset_name": "pink_tulip",
+  "description": {
+    "color": "#8BAA7E",
+    "translate": "trim_material.minecraft.pink_tulip"
+  },
+  "ingredient": "minecraft:pink_tulip",
+  "item_model_index": 1.0
+}

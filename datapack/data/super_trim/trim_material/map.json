@@ -1,0 +1,9 @@
+{
+  "asset_name": "map",
+  "description": {
+    "color": "#C6C88F",
+    "translate": "trim_material.minecraft.map"
+  },
+  "ingredient": "minecraft:map",
+  "item_model_index": 1.0
+}

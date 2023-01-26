@@ -1,0 +1,9 @@
+{
+  "asset_name": "leather_boots",
+  "description": {
+    "color": "#868686",
+    "translate": "trim_material.minecraft.leather_boots"
+  },
+  "ingredient": "minecraft:leather_boots",
+  "item_model_index": 1.0
+}

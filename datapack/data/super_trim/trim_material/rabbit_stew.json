@@ -1,0 +1,9 @@
+{
+  "asset_name": "rabbit_stew",
+  "description": {
+    "color": "#9B6028",
+    "translate": "trim_material.minecraft.rabbit_stew"
+  },
+  "ingredient": "minecraft:rabbit_stew",
+  "item_model_index": 1.0
+}

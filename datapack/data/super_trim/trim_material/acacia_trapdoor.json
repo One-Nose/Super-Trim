@@ -1,0 +1,9 @@
+{
+  "asset_name": "acacia_trapdoor",
+  "description": {
+    "color": "#89573D",
+    "translate": "trim_material.minecraft.acacia_trapdoor"
+  },
+  "ingredient": "minecraft:acacia_trapdoor",
+  "item_model_index": 1.0
+}

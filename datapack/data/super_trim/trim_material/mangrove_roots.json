@@ -1,0 +1,9 @@
+{
+  "asset_name": "mangrove_roots",
+  "description": {
+    "color": "#4A3A26",
+    "translate": "trim_material.minecraft.mangrove_roots"
+  },
+  "ingredient": "minecraft:mangrove_roots",
+  "item_model_index": 1.0
+}

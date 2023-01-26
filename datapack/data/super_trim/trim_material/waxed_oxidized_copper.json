@@ -1,0 +1,9 @@
+{
+  "asset_name": "waxed_oxidized_copper",
+  "description": {
+    "color": "#4C957A",
+    "translate": "trim_material.minecraft.waxed_oxidized_copper"
+  },
+  "ingredient": "minecraft:waxed_oxidized_copper",
+  "item_model_index": 1.0
+}

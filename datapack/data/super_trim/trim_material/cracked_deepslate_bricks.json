@@ -1,0 +1,9 @@
+{
+  "asset_name": "cracked_deepslate_bricks",
+  "description": {
+    "color": "#3E3E3F",
+    "translate": "trim_material.minecraft.cracked_deepslate_bricks"
+  },
+  "ingredient": "minecraft:cracked_deepslate_bricks",
+  "item_model_index": 1.0
+}

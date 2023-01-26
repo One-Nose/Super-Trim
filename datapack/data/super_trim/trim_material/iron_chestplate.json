@@ -1,0 +1,9 @@
+{
+  "asset_name": "iron_chestplate",
+  "description": {
+    "color": "#8E8E8E",
+    "translate": "trim_material.minecraft.iron_chestplate"
+  },
+  "ingredient": "minecraft:iron_chestplate",
+  "item_model_index": 1.0
+}

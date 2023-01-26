@@ -1,0 +1,9 @@
+{
+  "asset_name": "ochre_froglight",
+  "description": {
+    "color": "#F2E2A8",
+    "translate": "trim_material.minecraft.ochre_froglight"
+  },
+  "ingredient": "minecraft:ochre_froglight",
+  "item_model_index": 1.0
+}

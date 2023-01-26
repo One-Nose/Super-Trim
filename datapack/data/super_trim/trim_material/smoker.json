@@ -1,0 +1,9 @@
+{
+  "asset_name": "smoker",
+  "description": {
+    "color": "#5D5852",
+    "translate": "trim_material.minecraft.smoker"
+  },
+  "ingredient": "minecraft:smoker",
+  "item_model_index": 1.0
+}

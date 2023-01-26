@@ -1,0 +1,9 @@
+{
+  "asset_name": "sculk_shrieker",
+  "description": {
+    "color": "#0B353A",
+    "translate": "trim_material.minecraft.sculk_shrieker"
+  },
+  "ingredient": "minecraft:sculk_shrieker",
+  "item_model_index": 1.0
+}

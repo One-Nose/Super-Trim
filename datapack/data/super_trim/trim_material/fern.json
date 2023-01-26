@@ -1,0 +1,9 @@
+{
+  "asset_name": "fern",
+  "description": {
+    "color": "#808080",
+    "translate": "trim_material.minecraft.fern"
+  },
+  "ingredient": "minecraft:fern",
+  "item_model_index": 1.0
+}

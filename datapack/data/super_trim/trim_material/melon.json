@@ -1,0 +1,9 @@
+{
+  "asset_name": "melon",
+  "description": {
+    "color": "#5A831D",
+    "translate": "trim_material.minecraft.melon"
+  },
+  "ingredient": "minecraft:melon",
+  "item_model_index": 1.0
+}

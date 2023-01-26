@@ -1,0 +1,9 @@
+{
+  "asset_name": "gunpowder",
+  "description": {
+    "color": "#555555",
+    "translate": "trim_material.minecraft.gunpowder"
+  },
+  "ingredient": "minecraft:gunpowder",
+  "item_model_index": 1.0
+}

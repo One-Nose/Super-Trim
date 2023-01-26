@@ -1,0 +1,9 @@
+{
+  "asset_name": "bone_meal",
+  "description": {
+    "color": "#9F9EB3",
+    "translate": "trim_material.minecraft.bone_meal"
+  },
+  "ingredient": "minecraft:bone_meal",
+  "item_model_index": 1.0
+}

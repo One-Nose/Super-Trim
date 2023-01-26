@@ -1,0 +1,9 @@
+{
+  "asset_name": "birch_hanging_sign",
+  "description": {
+    "color": "#837859",
+    "translate": "trim_material.minecraft.birch_hanging_sign"
+  },
+  "ingredient": "minecraft:birch_hanging_sign",
+  "item_model_index": 1.0
+}

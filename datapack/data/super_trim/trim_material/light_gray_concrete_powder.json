@@ -1,0 +1,9 @@
+{
+  "asset_name": "light_gray_concrete_powder",
+  "description": {
+    "color": "#9C9C95",
+    "translate": "trim_material.minecraft.light_gray_concrete_powder"
+  },
+  "ingredient": "minecraft:light_gray_concrete_powder",
+  "item_model_index": 1.0
+}

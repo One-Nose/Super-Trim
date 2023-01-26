@@ -1,0 +1,9 @@
+{
+  "asset_name": "cracked_deepslate_tiles",
+  "description": {
+    "color": "#3C3C3D",
+    "translate": "trim_material.minecraft.cracked_deepslate_tiles"
+  },
+  "ingredient": "minecraft:cracked_deepslate_tiles",
+  "item_model_index": 1.0
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "warped_pressure_plate",
+  "description": {
+    "color": "#27625D",
+    "translate": "trim_material.minecraft.warped_pressure_plate"
+  },
+  "ingredient": "minecraft:warped_pressure_plate",
+  "item_model_index": 1.0
+}

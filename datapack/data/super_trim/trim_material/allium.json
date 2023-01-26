@@ -1,0 +1,9 @@
+{
+  "asset_name": "allium",
+  "description": {
+    "color": "#838B8B",
+    "translate": "trim_material.minecraft.allium"
+  },
+  "ingredient": "minecraft:allium",
+  "item_model_index": 1.0
+}

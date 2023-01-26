@@ -1,0 +1,9 @@
+{
+  "asset_name": "spruce_trapdoor",
+  "description": {
+    "color": "#5E4C35",
+    "translate": "trim_material.minecraft.spruce_trapdoor"
+  },
+  "ingredient": "minecraft:spruce_trapdoor",
+  "item_model_index": 1.0
+}

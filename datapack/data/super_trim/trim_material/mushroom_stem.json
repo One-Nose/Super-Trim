@@ -1,0 +1,9 @@
+{
+  "asset_name": "mushroom_stem",
+  "description": {
+    "color": "#CAC3B8",
+    "translate": "trim_material.minecraft.mushroom_stem"
+  },
+  "ingredient": "minecraft:mushroom_stem",
+  "item_model_index": 1.0
+}

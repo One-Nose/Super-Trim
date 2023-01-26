@@ -1,0 +1,9 @@
+{
+  "asset_name": "bamboo_hanging_sign",
+  "description": {
+    "color": "#92854B",
+    "translate": "trim_material.minecraft.bamboo_hanging_sign"
+  },
+  "ingredient": "minecraft:bamboo_hanging_sign",
+  "item_model_index": 1.0
+}

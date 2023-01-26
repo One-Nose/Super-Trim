@@ -1,0 +1,9 @@
+{
+  "asset_name": "cake",
+  "description": {
+    "color": "#BC6D52",
+    "translate": "trim_material.minecraft.cake"
+  },
+  "ingredient": "minecraft:cake",
+  "item_model_index": 1.0
+}

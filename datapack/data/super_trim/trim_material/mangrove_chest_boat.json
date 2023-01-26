@@ -1,0 +1,9 @@
+{
+  "asset_name": "mangrove_chest_boat",
+  "description": {
+    "color": "#663D22",
+    "translate": "trim_material.minecraft.mangrove_chest_boat"
+  },
+  "ingredient": "minecraft:mangrove_chest_boat",
+  "item_model_index": 1.0
+}

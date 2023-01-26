@@ -1,0 +1,9 @@
+{
+  "asset_name": "lectern",
+  "description": {
+    "color": "#9D7C4A",
+    "translate": "trim_material.minecraft.lectern"
+  },
+  "ingredient": "minecraft:lectern",
+  "item_model_index": 1.0
+}

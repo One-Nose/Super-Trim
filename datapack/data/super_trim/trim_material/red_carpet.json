@@ -1,0 +1,9 @@
+{
+  "asset_name": "red_carpet",
+  "description": {
+    "color": "#9F2622",
+    "translate": "trim_material.minecraft.red_carpet"
+  },
+  "ingredient": "minecraft:red_carpet",
+  "item_model_index": 1.0
+}

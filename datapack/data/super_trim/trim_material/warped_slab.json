@@ -1,0 +1,9 @@
+{
+  "asset_name": "warped_slab",
+  "description": {
+    "color": "#27625D",
+    "translate": "trim_material.minecraft.warped_slab"
+  },
+  "ingredient": "minecraft:warped_slab",
+  "item_model_index": 1.0
+}

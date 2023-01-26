@@ -1,0 +1,9 @@
+{
+  "asset_name": "quartz_bricks",
+  "description": {
+    "color": "#E9E4DB",
+    "translate": "trim_material.minecraft.quartz_bricks"
+  },
+  "ingredient": "minecraft:quartz_bricks",
+  "item_model_index": 1.0
+}

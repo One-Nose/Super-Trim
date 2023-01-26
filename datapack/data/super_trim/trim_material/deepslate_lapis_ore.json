@@ -1,0 +1,9 @@
+{
+  "asset_name": "deepslate_lapis_ore",
+  "description": {
+    "color": "#365390",
+    "translate": "trim_material.minecraft.deepslate_lapis_ore"
+  },
+  "ingredient": "minecraft:deepslate_lapis_ore",
+  "item_model_index": 1.0
+}

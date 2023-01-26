@@ -1,0 +1,9 @@
+{
+  "asset_name": "stripped_warped_stem",
+  "description": {
+    "color": "#31817B",
+    "translate": "trim_material.minecraft.stripped_warped_stem"
+  },
+  "ingredient": "minecraft:stripped_warped_stem",
+  "item_model_index": 1.0
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "bamboo_mosaic_spawn_egg",
+  "description": {
+    "color": "#BEAB4E",
+    "translate": "trim_material.minecraft.bamboo_mosaic_spawn_egg"
+  },
+  "ingredient": "minecraft:bamboo_mosaic_spawn_egg",
+  "item_model_index": 1.0
+}

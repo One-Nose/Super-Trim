@@ -1,0 +1,9 @@
+{
+  "asset_name": "honey_bottle",
+  "description": {
+    "color": "#BD8F6C",
+    "translate": "trim_material.minecraft.honey_bottle"
+  },
+  "ingredient": "minecraft:honey_bottle",
+  "item_model_index": 1.0
+}

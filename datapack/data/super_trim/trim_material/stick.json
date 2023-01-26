@@ -1,0 +1,9 @@
+{
+  "asset_name": "stick",
+  "description": {
+    "color": "#584219",
+    "translate": "trim_material.minecraft.stick"
+  },
+  "ingredient": "minecraft:stick",
+  "item_model_index": 1.0
+}

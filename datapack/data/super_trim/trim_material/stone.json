@@ -1,0 +1,9 @@
+{
+  "asset_name": "stone",
+  "description": {
+    "color": "#7A7A7A",
+    "translate": "trim_material.minecraft.stone"
+  },
+  "ingredient": "minecraft:stone",
+  "item_model_index": 1.0
+}

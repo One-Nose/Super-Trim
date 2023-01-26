@@ -1,0 +1,9 @@
+{
+  "asset_name": "diorite_slab",
+  "description": {
+    "color": "#AFAFB0",
+    "translate": "trim_material.minecraft.diorite_slab"
+  },
+  "ingredient": "minecraft:diorite_slab",
+  "item_model_index": 1.0
+}

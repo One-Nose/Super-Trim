@@ -1,0 +1,9 @@
+{
+  "asset_name": "bucket",
+  "description": {
+    "color": "#8D8D8D",
+    "translate": "trim_material.minecraft.bucket"
+  },
+  "ingredient": "minecraft:bucket",
+  "item_model_index": 1.0
+}

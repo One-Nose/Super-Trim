@@ -1,0 +1,9 @@
+{
+  "asset_name": "dirt",
+  "description": {
+    "color": "#816652",
+    "translate": "trim_material.minecraft.dirt"
+  },
+  "ingredient": "minecraft:dirt",
+  "item_model_index": 1.0
+}

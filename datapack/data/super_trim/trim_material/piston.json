@@ -1,0 +1,9 @@
+{
+  "asset_name": "piston",
+  "description": {
+    "color": "#5E5D5D",
+    "translate": "trim_material.minecraft.piston"
+  },
+  "ingredient": "minecraft:piston",
+  "item_model_index": 1.0
+}

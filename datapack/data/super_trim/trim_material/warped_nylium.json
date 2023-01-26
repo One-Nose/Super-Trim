@@ -1,0 +1,9 @@
+{
+  "asset_name": "warped_nylium",
+  "description": {
+    "color": "#5E2525",
+    "translate": "trim_material.minecraft.warped_nylium"
+  },
+  "ingredient": "minecraft:warped_nylium",
+  "item_model_index": 1.0
+}

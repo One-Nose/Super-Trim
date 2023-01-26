@@ -1,0 +1,9 @@
+{
+  "asset_name": "pink_wool",
+  "description": {
+    "color": "#EA87A7",
+    "translate": "trim_material.minecraft.pink_wool"
+  },
+  "ingredient": "minecraft:pink_wool",
+  "item_model_index": 1.0
+}

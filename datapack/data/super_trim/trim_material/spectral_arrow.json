@@ -1,0 +1,9 @@
+{
+  "asset_name": "spectral_arrow",
+  "description": {
+    "color": "#D3B35D",
+    "translate": "trim_material.minecraft.spectral_arrow"
+  },
+  "ingredient": "minecraft:spectral_arrow",
+  "item_model_index": 1.0
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "flint",
+  "description": {
+    "color": "#4C4C4C",
+    "translate": "trim_material.minecraft.flint"
+  },
+  "ingredient": "minecraft:flint",
+  "item_model_index": 1.0
+}

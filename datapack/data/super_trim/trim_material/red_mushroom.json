@@ -1,0 +1,9 @@
+{
+  "asset_name": "red_mushroom",
+  "description": {
+    "color": "#C5806E",
+    "translate": "trim_material.minecraft.red_mushroom"
+  },
+  "ingredient": "minecraft:red_mushroom",
+  "item_model_index": 1.0
+}

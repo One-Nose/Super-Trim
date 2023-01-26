@@ -1,0 +1,9 @@
+{
+  "asset_name": "ender_eye",
+  "description": {
+    "color": "#61915D",
+    "translate": "trim_material.minecraft.ender_eye"
+  },
+  "ingredient": "minecraft:ender_eye",
+  "item_model_index": 1.0
+}

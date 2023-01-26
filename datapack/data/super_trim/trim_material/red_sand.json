@@ -1,0 +1,9 @@
+{
+  "asset_name": "red_sand",
+  "description": {
+    "color": "#C36A22",
+    "translate": "trim_material.minecraft.red_sand"
+  },
+  "ingredient": "minecraft:red_sand",
+  "item_model_index": 1.0
+}

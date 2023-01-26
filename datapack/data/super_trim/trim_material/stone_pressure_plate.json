@@ -1,0 +1,9 @@
+{
+  "asset_name": "stone_pressure_plate",
+  "description": {
+    "color": "#7A7A7A",
+    "translate": "trim_material.minecraft.stone_pressure_plate"
+  },
+  "ingredient": "minecraft:stone_pressure_plate",
+  "item_model_index": 1.0
+}

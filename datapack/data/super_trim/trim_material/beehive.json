@@ -1,0 +1,9 @@
+{
+  "asset_name": "beehive",
+  "description": {
+    "color": "#AC8B54",
+    "translate": "trim_material.minecraft.beehive"
+  },
+  "ingredient": "minecraft:beehive",
+  "item_model_index": 1.0
+}

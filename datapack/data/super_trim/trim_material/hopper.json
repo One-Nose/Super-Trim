@@ -1,0 +1,9 @@
+{
+  "asset_name": "hopper",
+  "description": {
+    "color": "#454645",
+    "translate": "trim_material.minecraft.hopper"
+  },
+  "ingredient": "minecraft:hopper",
+  "item_model_index": 1.0
+}

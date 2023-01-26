@@ -1,0 +1,9 @@
+{
+  "asset_name": "ice",
+  "description": {
+    "color": "#A1C2FE",
+    "translate": "trim_material.minecraft.ice"
+  },
+  "ingredient": "minecraft:ice",
+  "item_model_index": 1.0
+}

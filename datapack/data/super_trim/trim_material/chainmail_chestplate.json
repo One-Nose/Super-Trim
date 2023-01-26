@@ -1,0 +1,9 @@
+{
+  "asset_name": "chainmail_chestplate",
+  "description": {
+    "color": "#8E8E8E",
+    "translate": "trim_material.minecraft.chainmail_chestplate"
+  },
+  "ingredient": "minecraft:chainmail_chestplate",
+  "item_model_index": 1.0
+}

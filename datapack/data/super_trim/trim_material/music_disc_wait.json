@@ -1,0 +1,9 @@
+{
+  "asset_name": "music_disc_wait",
+  "description": {
+    "color": "#3E4C63",
+    "translate": "trim_material.minecraft.music_disc_wait"
+  },
+  "ingredient": "minecraft:music_disc_wait",
+  "item_model_index": 1.0
+}

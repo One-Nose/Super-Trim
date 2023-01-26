@@ -1,0 +1,9 @@
+{
+  "asset_name": "chiseled_deepslate",
+  "description": {
+    "color": "#3C3C3D",
+    "translate": "trim_material.minecraft.chiseled_deepslate"
+  },
+  "ingredient": "minecraft:chiseled_deepslate",
+  "item_model_index": 1.0
+}

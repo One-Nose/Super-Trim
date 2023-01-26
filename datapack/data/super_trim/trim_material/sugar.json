@@ -1,0 +1,9 @@
+{
+  "asset_name": "sugar",
+  "description": {
+    "color": "#C2C2CB",
+    "translate": "trim_material.minecraft.sugar"
+  },
+  "ingredient": "minecraft:sugar",
+  "item_model_index": 1.0
+}

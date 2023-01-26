@@ -1,0 +1,9 @@
+{
+  "asset_name": "sandstone_slab",
+  "description": {
+    "color": "#D8CA9A",
+    "translate": "trim_material.minecraft.sandstone_slab"
+  },
+  "ingredient": "minecraft:sandstone_slab",
+  "item_model_index": 1.0
+}

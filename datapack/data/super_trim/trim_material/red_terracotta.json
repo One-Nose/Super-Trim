@@ -1,0 +1,9 @@
+{
+  "asset_name": "red_terracotta",
+  "description": {
+    "color": "#8F3D2F",
+    "translate": "trim_material.minecraft.red_terracotta"
+  },
+  "ingredient": "minecraft:red_terracotta",
+  "item_model_index": 1.0
+}

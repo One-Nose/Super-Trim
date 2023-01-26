@@ -1,0 +1,9 @@
+{
+  "asset_name": "iron_door",
+  "description": {
+    "color": "#909090",
+    "translate": "trim_material.minecraft.iron_door"
+  },
+  "ingredient": "minecraft:iron_door",
+  "item_model_index": 1.0
+}

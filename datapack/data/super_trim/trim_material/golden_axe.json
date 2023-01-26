@@ -1,0 +1,9 @@
+{
+  "asset_name": "golden_axe",
+  "description": {
+    "color": "#947A26",
+    "translate": "trim_material.minecraft.golden_axe"
+  },
+  "ingredient": "minecraft:golden_axe",
+  "item_model_index": 1.0
+}

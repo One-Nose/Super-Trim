@@ -1,0 +1,9 @@
+{
+  "asset_name": "arrow",
+  "description": {
+    "color": "#969188",
+    "translate": "trim_material.minecraft.arrow"
+  },
+  "ingredient": "minecraft:arrow",
+  "item_model_index": 1.0
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "charcoal",
+  "description": {
+    "color": "#3C3529",
+    "translate": "trim_material.minecraft.charcoal"
+  },
+  "ingredient": "minecraft:charcoal",
+  "item_model_index": 1.0
+}

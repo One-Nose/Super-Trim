@@ -1,0 +1,9 @@
+{
+  "asset_name": "jungle_sapling",
+  "description": {
+    "color": "#2C430D",
+    "translate": "trim_material.minecraft.jungle_sapling"
+  },
+  "ingredient": "minecraft:jungle_sapling",
+  "item_model_index": 1.0
+}

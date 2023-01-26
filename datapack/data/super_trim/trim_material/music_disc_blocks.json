@@ -1,0 +1,9 @@
+{
+  "asset_name": "music_disc_blocks",
+  "description": {
+    "color": "#4C3430",
+    "translate": "trim_material.minecraft.music_disc_blocks"
+  },
+  "ingredient": "minecraft:music_disc_blocks",
+  "item_model_index": 1.0
+}

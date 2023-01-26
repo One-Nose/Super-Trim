@@ -1,0 +1,9 @@
+{
+  "asset_name": "orange_tulip",
+  "description": {
+    "color": "#818C24",
+    "translate": "trim_material.minecraft.orange_tulip"
+  },
+  "ingredient": "minecraft:orange_tulip",
+  "item_model_index": 1.0
+}

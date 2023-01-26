@@ -1,0 +1,9 @@
+{
+  "asset_name": "diorite_stairs",
+  "description": {
+    "color": "#AFAFB0",
+    "translate": "trim_material.minecraft.diorite_stairs"
+  },
+  "ingredient": "minecraft:diorite_stairs",
+  "item_model_index": 1.0
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "lilac",
+  "description": {
+    "color": "#818573",
+    "translate": "trim_material.minecraft.lilac"
+  },
+  "ingredient": "minecraft:lilac",
+  "item_model_index": 1.0
+}

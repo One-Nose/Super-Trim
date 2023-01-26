@@ -1,0 +1,9 @@
+{
+  "asset_name": "pufferfish",
+  "description": {
+    "color": "#B09B5F",
+    "translate": "trim_material.minecraft.pufferfish"
+  },
+  "ingredient": "minecraft:pufferfish",
+  "item_model_index": 1.0
+}

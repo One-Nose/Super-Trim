@@ -1,0 +1,9 @@
+{
+  "asset_name": "chicken",
+  "description": {
+    "color": "#D6A894",
+    "translate": "trim_material.minecraft.chicken"
+  },
+  "ingredient": "minecraft:chicken",
+  "item_model_index": 1.0
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "vine",
+  "description": {
+    "color": "#7B7B7B",
+    "translate": "trim_material.minecraft.vine"
+  },
+  "ingredient": "minecraft:vine",
+  "item_model_index": 1.0
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "paper",
+  "description": {
+    "color": "#C8C8C6",
+    "translate": "trim_material.minecraft.paper"
+  },
+  "ingredient": "minecraft:paper",
+  "item_model_index": 1.0
+}

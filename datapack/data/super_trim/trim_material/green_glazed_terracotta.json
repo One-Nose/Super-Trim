@@ -1,0 +1,9 @@
+{
+  "asset_name": "green_glazed_terracotta",
+  "description": {
+    "color": "#758D44",
+    "translate": "trim_material.minecraft.green_glazed_terracotta"
+  },
+  "ingredient": "minecraft:green_glazed_terracotta",
+  "item_model_index": 1.0
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "totem_of_undying",
+  "description": {
+    "color": "#A6AF68",
+    "translate": "trim_material.minecraft.totem_of_undying"
+  },
+  "ingredient": "minecraft:totem_of_undying",
+  "item_model_index": 1.0
+}
