@@ -1,7 +1,7 @@
 [
   {
     "credit0": "Altered from the PrismarineJS project:",
-    "credit1": "https://github.com/PrismarineJS/minecraft-assets/blob/master/data/1.19.1/minecraft:item_textures.json",
+    "credit1": "https://github.com/PrismarineJS/minecraft-assets/blob/master/data/1.19.1/items_textures.json",
     "name": "air",
     "model": "air",
     "texture": null
