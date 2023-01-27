@@ -1,0 +1,9 @@
+{
+  "asset_name": "spire_armor_trim_smithing_template",
+  "description": {
+    "color": "#797AA3",
+    "translate": "trim_material.minecraft.spire_armor_trim_smithing_template"
+  },
+  "ingredient": "minecraft:spire_armor_trim_smithing_template",
+  "item_model_index": 1.0
+}

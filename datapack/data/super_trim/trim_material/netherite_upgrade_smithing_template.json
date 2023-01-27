@@ -1,0 +1,9 @@
+{
+  "asset_name": "netherite_upgrade_smithing_template",
+  "description": {
+    "color": "#556165",
+    "translate": "trim_material.minecraft.netherite_upgrade_smithing_template"
+  },
+  "ingredient": "minecraft:netherite_upgrade_smithing_template",
+  "item_model_index": 1.0
+}

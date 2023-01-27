@@ -1,0 +1,9 @@
+{
+  "asset_name": "coast_armor_trim_smithing_template",
+  "description": {
+    "color": "#5C737B",
+    "translate": "trim_material.minecraft.coast_armor_trim_smithing_template"
+  },
+  "ingredient": "minecraft:coast_armor_trim_smithing_template",
+  "item_model_index": 1.0
+}

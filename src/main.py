@@ -34,11 +34,11 @@ def colors(texture: str) -> set[tuple[int]]:
     return set(filter(lambda p: p[3] > 0, data))
 
 
-def create_atlas(path: str) -> None:
-    with open('../minecraft/atlases/armor_trims.json') as file:
+def create_atlas(path: str, atlas_name: str, index: int) -> None:
+    with open(f'../minecraft/atlases/{atlas_name}.json') as file:
         atlas = load(file)
 
-    permutations = atlas['sources'][0]['permutations']
+    permutations = atlas['sources'][index]['permutations'] = {}
     for item in items():
         permutations[item['name']] = f"super_trim:trims/color_palettes/{item['name']}"
 
@@ -134,7 +134,10 @@ def create_resourcepack(path: str) -> None:
 
     print('Creating armor_trims.json...')
     makedirs(join(path, 'assets/minecraft/atlases'))
-    create_atlas(join(path, 'assets/minecraft/atlases/armor_trims.json'))
+    create_atlas(join(path, 'assets/minecraft/atlases/armor_trims.json'), 'armor_trims', 0)
+
+    print('Creating blocks.json...')
+    create_atlas(join(path, 'assets/minecraft/atlases/blocks.json'), 'blocks', 5)
 
     print('Creating color palettes...')
     makedirs(join(path, 'assets/super_trim/textures/trims/color_palettes'))

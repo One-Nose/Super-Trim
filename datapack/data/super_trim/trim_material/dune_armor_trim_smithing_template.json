@@ -1,0 +1,9 @@
+{
+  "asset_name": "dune_armor_trim_smithing_template",
+  "description": {
+    "color": "#A2C3A4",
+    "translate": "trim_material.minecraft.dune_armor_trim_smithing_template"
+  },
+  "ingredient": "minecraft:dune_armor_trim_smithing_template",
+  "item_model_index": 1.0
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "ward_armor_trim_smithing_template",
+  "description": {
+    "color": "#437379",
+    "translate": "trim_material.minecraft.ward_armor_trim_smithing_template"
+  },
+  "ingredient": "minecraft:ward_armor_trim_smithing_template",
+  "item_model_index": 1.0
+}

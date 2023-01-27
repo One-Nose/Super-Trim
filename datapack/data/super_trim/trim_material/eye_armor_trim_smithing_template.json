@@ -1,0 +1,9 @@
+{
+  "asset_name": "eye_armor_trim_smithing_template",
+  "description": {
+    "color": "#9ABE9E",
+    "translate": "trim_material.minecraft.eye_armor_trim_smithing_template"
+  },
+  "ingredient": "minecraft:eye_armor_trim_smithing_template",
+  "item_model_index": 1.0
+}

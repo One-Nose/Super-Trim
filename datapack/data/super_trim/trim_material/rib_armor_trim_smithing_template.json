@@ -1,0 +1,9 @@
+{
+  "asset_name": "rib_armor_trim_smithing_template",
+  "description": {
+    "color": "#203540",
+    "translate": "trim_material.minecraft.rib_armor_trim_smithing_template"
+  },
+  "ingredient": "minecraft:rib_armor_trim_smithing_template",
+  "item_model_index": 1.0
+}

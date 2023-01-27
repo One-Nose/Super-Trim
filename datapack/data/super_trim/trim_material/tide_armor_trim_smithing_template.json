@@ -1,0 +1,9 @@
+{
+  "asset_name": "tide_armor_trim_smithing_template",
+  "description": {
+    "color": "#59ADA6",
+    "translate": "trim_material.minecraft.tide_armor_trim_smithing_template"
+  },
+  "ingredient": "minecraft:tide_armor_trim_smithing_template",
+  "item_model_index": 1.0
+}

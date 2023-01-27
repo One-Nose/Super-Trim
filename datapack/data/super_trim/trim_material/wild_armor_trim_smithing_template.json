@@ -1,0 +1,9 @@
+{
+  "asset_name": "wild_armor_trim_smithing_template",
+  "description": {
+    "color": "#5F7F70",
+    "translate": "trim_material.minecraft.wild_armor_trim_smithing_template"
+  },
+  "ingredient": "minecraft:wild_armor_trim_smithing_template",
+  "item_model_index": 1.0
+}
