@@ -1,7 +1,8 @@
+from contextlib import suppress
 from json import dump, load
-from os import makedirs, mkdir
+from os import makedirs, mkdir, remove
 from os.path import join
-from shutil import rmtree, copyfile
+from shutil import rmtree, copyfile, make_archive
 from typing import Iterable
 
 from PIL import Image
@@ -73,6 +74,11 @@ def create_datapack(path: str) -> None:
     print('Creating pack.png...')
     copyfile('../pack.png', join(path, 'pack.png'))
 
+    print('Creating Super Trim.zip...')
+    with suppress(FileNotFoundError):
+        remove('../Super Trim.zip')
+    make_archive('../Super Trim', 'zip', '../datapack')
+
     print('Datapack ready')
 
 
@@ -136,9 +142,6 @@ def create_resourcepack(path: str) -> None:
     makedirs(join(path, 'assets/minecraft/atlases'))
     create_atlas(join(path, 'assets/minecraft/atlases/armor_trims.json'), 'armor_trims', 0)
 
-    print('Creating blocks.json...')
-    create_atlas(join(path, 'assets/minecraft/atlases/blocks.json'), 'blocks', 5)
-
     print('Creating color palettes...')
     makedirs(join(path, 'assets/super_trim/textures/trims/color_palettes'))
     create_color_palettes(join(path, 'assets/super_trim/textures/trims/color_palettes'))
@@ -149,6 +152,11 @@ def create_resourcepack(path: str) -> None:
 
     print('Creating pack.png...')
     copyfile('../pack.png', join(path, 'pack.png'))
+
+    print('Creating Super Trim - Resources.zip...')
+    with suppress(FileNotFoundError):
+        remove('../Super Trim - Resources.zip')
+    make_archive('../Super Trim - Resources', 'zip', '../resourcepack')
 
     print('Resource pack ready')
 
