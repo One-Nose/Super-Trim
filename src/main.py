@@ -2,7 +2,7 @@ from contextlib import suppress
 from json import dump, load
 from os import makedirs, mkdir, remove
 from os.path import join
-from shutil import rmtree, copyfile, make_archive
+from shutil import copyfile, make_archive, rmtree
 from typing import Iterable
 
 from PIL import Image
