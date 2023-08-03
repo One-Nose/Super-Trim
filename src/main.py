@@ -33,7 +33,7 @@ def color_palette(texture: str) -> Image:
     return result
 
 
-def colors(texture: str) -> set[tuple[int]]:
+def colors(texture: str) -> set[tuple[int, int, int, int]]:
     with Image.open(texture) as image:
         data = image.convert('RGBA').getdata()
     return set(color for color in data if color[3] > 0)
