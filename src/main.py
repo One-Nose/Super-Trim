@@ -1,3 +1,5 @@
+"""A scripts that generates the data pack and resource pack"""
+
 from contextlib import suppress
 from json import dump, load
 from os import makedirs, mkdir, remove
