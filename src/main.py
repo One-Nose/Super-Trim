@@ -14,7 +14,7 @@ def color_palette(texture: str) -> Image:
     data = sorted(colors(texture), key=lambda c: sum(c), reverse=True)
 
     if len(data) == 1:
-        data = list(data) * 8
+        data *= 8
 
     while len(data) > 8:
         pixels = min(zip(data, data[2:]), key=lambda ps: sum(ps[0]) - sum(ps[1]))
@@ -22,9 +22,11 @@ def color_palette(texture: str) -> Image:
         data.pop(index)
 
     while len(data) < 8:
-        pixels = max(zip(data, data[1:]), key=lambda ps: sum(ps[0]) - sum(ps[1]))
+        pixels = max(
+            zip(data, data[1:]), key=lambda colors: sum(colors[0]) - sum(colors[1])
+        )
         index = data.index(pixels[1])
-        data.insert(index, tuple(c[1] + (c[0]-c[1]) // 2 for c in zip(pixels[0], pixels[1])))
+        data.insert(index, tuple(sum(color_part) // 2 for color_part in zip(*pixels)))
 
     result = Image.new('RGBA', (8, 1))
     result.putdata(data)
@@ -34,16 +36,17 @@ def color_palette(texture: str) -> Image:
 def colors(texture: str) -> set[tuple[int]]:
     with Image.open(texture) as image:
         data = image.convert('RGBA').getdata()
-    return set(filter(lambda p: p[3] > 0, data))
+    return set(color for color in data if color[3] > 0)
 
 
 def create_atlas(path: str, atlas_name: str, index: int) -> None:
     with open(f'../minecraft/atlases/{atlas_name}.json') as file:
         atlas = load(file)
 
-    permutations = atlas['sources'][index]['permutations'] = {}
-    for item in items():
-        permutations[item['name']] = f"super_trim:trims/color_palettes/{item['name']}"
+    atlas['sources'][index]['permutations'] = {
+        item['name']: 'super_trim:trims/color_palettes/' + item['name']
+        for item in items()
+    }
 
     with open(path, 'x') as file:
         dump(atlas, file, indent=2)
@@ -107,7 +110,7 @@ def create_lang(path: str) -> None:
 
 def create_material(path: str, item: dict[str, str]) -> None:
     rgba = zip(*colors(texture_path(item['texture'])))
-    rgba = tuple(map(lambda c: sum(c) // len(c), rgba))
+    rgba = tuple(sum(color_part) // len(color_part) for color_part in rgba)
 
     material = {
         'asset_name': item['name'],
