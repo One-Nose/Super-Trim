@@ -1,0 +1,41 @@
+{
+  "name": "minecraft-jar-extractor",
+  "version": "1.0.0",
+  "description": "Extract structured data from the minecraft jar",
+  "main": "protocol_extractor.js",
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "standard",
+    "fix": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrismarineJS/minecraft-jar-extractor.git"
+  },
+  "dependencies": {
+    "async": "~2.6.3",
+    "deep-equal": "^2.0.3",
+    "es6-promisify": "^7.0.0",
+    "extract-zip": "^2.0.1",
+    "fernflower": "^1.1.0",
+    "fs-extra": "^11.1.0",
+    "minecraft-data": "^3.0.0",
+    "minecraft-wrap": "^1.2.3",
+    "mkdirp": "^2.1.3",
+    "prismarine-loottable": "^1.0.0"
+  },
+  "keywords": [
+    "minecraft",
+    "jar",
+    "extractor"
+  ],
+  "author": "Romain Beaumont <romain.rom1@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PrismarineJS/minecraft-jar-extractor/issues"
+  },
+  "homepage": "https://github.com/PrismarineJS/minecraft-jar-extractor#readme",
+  "devDependencies": {
+    "standard": "^17.0.0"
+  }
+}
