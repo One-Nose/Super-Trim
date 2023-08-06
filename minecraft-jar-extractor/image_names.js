@@ -13,13 +13,16 @@ const minecraftVersions = process.argv[2].split(',')
 const outputDir = path.resolve(process.argv[3])
 const temporaryDir = path.resolve(process.argv[4])
 
+const MultiProgress = require('multi-progress')
+const multibar = new MultiProgress()
+
 minecraftVersions.forEach(minecraftVersion => {
   extract(minecraftVersion, outputDir + '/' + minecraftVersion, temporaryDir, function (err) {
     if (err) {
+      multibar.terminate()
       console.log(err.stack)
       return
     }
-    console.log('done ' + minecraftVersion + '!')
   })
 })
 
@@ -321,17 +324,30 @@ function generateTextureContent (outputDir) {
 }
 
 function extract (minecraftVersion, outputDir, temporaryDir, cb) {
+  const bar = multibar.newBar(
+    `progress [:bar] :percent | Version: ${minecraftVersion} | :current/:total | :action`,
+    { width: 50, total: 7, renderThrottle: 0 }
+  )
+  bar.tick(0, { action: 'Getting Minecraft files...' })
+
   getMinecraftFiles(minecraftVersion, temporaryDir, function (err, unzippedFilesDir) {
     if (err) {
       cb(err)
       return
     }
+    bar.tick({ action: 'Creating output directory...' })
     fs.mkdirpSync(outputDir)
+    bar.tick({ action: 'Getting items...' })
     getItems(unzippedFilesDir, outputDir + '/items_textures.json', itemMapping[minecraftVersion], minecraftVersion)
+    bar.tick({ action: 'Getting block...' })
     getBlocks(unzippedFilesDir, outputDir + '/blocks_textures.json', blockMapping[minecraftVersion], minecraftVersion)
+    bar.tick({ action: 'Getting models...' })
     getModels(unzippedFilesDir, outputDir + '/blocks_states.json', outputDir + '/blocks_models.json', blockMapping[minecraftVersion], minecraftVersion)
+    bar.tick({ action: 'Copying textures...' })
     copyTextures(unzippedFilesDir, outputDir)
+    bar.tick({ action: 'Generating texture content...' })
     generateTextureContent(outputDir)
+    bar.tick({ action: 'Finished' })
     cb()
-  })
+  }, multibar)
 }
