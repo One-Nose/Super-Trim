@@ -1,0 +1,9 @@
+{
+  "asset_name": "wayfinder_armor_trim_smithing_template",
+  "description": {
+    "color": "#4C6F6F",
+    "translate": "trim_material.minecraft.wayfinder_armor_trim_smithing_template"
+  },
+  "ingredient": "minecraft:wayfinder_armor_trim_smithing_template",
+  "item_model_index": 1.0
+}

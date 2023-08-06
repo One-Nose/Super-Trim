@@ -1,0 +1,9 @@
+{
+  "asset_name": "cherry_hanging_sign",
+  "description": {
+    "color": "#A17073",
+    "translate": "trim_material.minecraft.cherry_hanging_sign"
+  },
+  "ingredient": "minecraft:cherry_hanging_sign",
+  "item_model_index": 1.0
+}

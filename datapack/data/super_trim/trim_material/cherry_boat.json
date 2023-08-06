@@ -1,0 +1,9 @@
+{
+  "asset_name": "cherry_boat",
+  "description": {
+    "color": "#D39996",
+    "translate": "trim_material.minecraft.cherry_boat"
+  },
+  "ingredient": "minecraft:cherry_boat",
+  "item_model_index": 1.0
+}

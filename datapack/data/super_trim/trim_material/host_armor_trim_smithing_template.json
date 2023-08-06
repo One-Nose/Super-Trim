@@ -1,0 +1,9 @@
+{
+  "asset_name": "host_armor_trim_smithing_template",
+  "description": {
+    "color": "#4E5C59",
+    "translate": "trim_material.minecraft.host_armor_trim_smithing_template"
+  },
+  "ingredient": "minecraft:host_armor_trim_smithing_template",
+  "item_model_index": 1.0
+}

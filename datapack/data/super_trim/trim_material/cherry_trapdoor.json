@@ -1,0 +1,9 @@
+{
+  "asset_name": "cherry_trapdoor",
+  "description": {
+    "color": "#DFB6AE",
+    "translate": "trim_material.minecraft.cherry_trapdoor"
+  },
+  "ingredient": "minecraft:cherry_trapdoor",
+  "item_model_index": 1.0
+}

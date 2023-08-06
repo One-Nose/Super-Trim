@@ -1,0 +1,9 @@
+{
+  "asset_name": "torchflower_seeds",
+  "description": {
+    "color": "#527747",
+    "translate": "trim_material.minecraft.torchflower_seeds"
+  },
+  "ingredient": "minecraft:torchflower_seeds",
+  "item_model_index": 1.0
+}

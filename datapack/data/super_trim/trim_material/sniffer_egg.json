@@ -1,0 +1,9 @@
+{
+  "asset_name": "sniffer_egg",
+  "description": {
+    "color": "#644E49",
+    "translate": "trim_material.minecraft.sniffer_egg"
+  },
+  "ingredient": "minecraft:sniffer_egg",
+  "item_model_index": 1.0
+}

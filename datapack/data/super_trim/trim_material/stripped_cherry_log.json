@@ -1,0 +1,9 @@
+{
+  "asset_name": "stripped_cherry_log",
+  "description": {
+    "color": "#DBA19B",
+    "translate": "trim_material.minecraft.stripped_cherry_log"
+  },
+  "ingredient": "minecraft:stripped_cherry_log",
+  "item_model_index": 1.0
+}

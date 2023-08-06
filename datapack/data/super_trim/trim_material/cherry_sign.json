@@ -1,0 +1,9 @@
+{
+  "asset_name": "cherry_sign",
+  "description": {
+    "color": "#9C6F71",
+    "translate": "trim_material.minecraft.cherry_sign"
+  },
+  "ingredient": "minecraft:cherry_sign",
+  "item_model_index": 1.0
+}

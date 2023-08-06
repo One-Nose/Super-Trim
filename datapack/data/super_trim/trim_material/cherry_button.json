@@ -1,0 +1,9 @@
+{
+  "asset_name": "cherry_button",
+  "description": {
+    "color": "#E0AEA8",
+    "translate": "trim_material.minecraft.cherry_button"
+  },
+  "ingredient": "minecraft:cherry_button",
+  "item_model_index": 1.0
+}

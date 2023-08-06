@@ -1,0 +1,9 @@
+{
+  "asset_name": "pitcher_plant",
+  "description": {
+    "color": "#7B87B4",
+    "translate": "trim_material.minecraft.pitcher_plant"
+  },
+  "ingredient": "minecraft:pitcher_plant",
+  "item_model_index": 1.0
+}

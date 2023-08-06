@@ -1,0 +1,9 @@
+{
+  "asset_name": "decorated_pot",
+  "description": {
+    "color": "#854A3D",
+    "translate": "trim_material.minecraft.decorated_pot"
+  },
+  "ingredient": "minecraft:decorated_pot",
+  "item_model_index": 1.0
+}

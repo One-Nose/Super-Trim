@@ -1,0 +1,9 @@
+{
+  "asset_name": "brewer_pottery_sherd",
+  "description": {
+    "color": "#703F33",
+    "translate": "trim_material.minecraft.brewer_pottery_sherd"
+  },
+  "ingredient": "minecraft:brewer_pottery_sherd",
+  "item_model_index": 1.0
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "cherry_wood",
+  "description": {
+    "color": "#3C2430",
+    "translate": "trim_material.minecraft.cherry_wood"
+  },
+  "ingredient": "minecraft:cherry_wood",
+  "item_model_index": 1.0
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "cherry_stairs",
+  "description": {
+    "color": "#E0AEA8",
+    "translate": "trim_material.minecraft.cherry_stairs"
+  },
+  "ingredient": "minecraft:cherry_stairs",
+  "item_model_index": 1.0
+}

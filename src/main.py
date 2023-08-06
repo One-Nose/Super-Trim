@@ -5,6 +5,7 @@ from json import dump, load
 from os import makedirs, remove
 from pathlib import Path
 from shutil import copyfile, make_archive, rmtree
+from sys import argv
 from typing import Iterable, Sequence, TypedDict
 
 from PIL import Image
@@ -12,8 +13,10 @@ from tqdm import tqdm
 
 ROOT = Path.cwd()
 
-MINECRAFT_ROOT = ROOT / 'minecraft'
 SRC_ROOT = ROOT / 'src'
+EXTRACTOR_ROOT = ROOT / 'extractor'
+DATA_ROOT = EXTRACTOR_ROOT / 'minecraft_extracted_data'
+OUT_ROOT = EXTRACTOR_ROOT / 'out'
 
 
 class AtlasSource(TypedDict, total=False):
@@ -68,34 +71,38 @@ def colors(texture: Path) -> set[tuple[int, int, int, int]]:
     return set(color for color in data if color[3] > 0)
 
 
-def create_atlas(path: Path, atlas_name: str, index: int) -> None:
+def create_atlas(path: Path, atlas_name: str, version: str) -> None:
     """
-    Copies a source from an atlas from the minecraft folder
+    Copies a source from an atlas from the minecraft version folder
     and saves an updated version of the atlas in the given path
     """
 
-    with (MINECRAFT_ROOT / 'atlases' / f'{atlas_name}.json').open() as file:
+    with (
+        DATA_ROOT / version / 'assets' / 'minecraft' / 'atlases' / f'{atlas_name}.json'
+    ).open(encoding='UTF-8') as file:
         atlas: dict[str, list[AtlasSource]] = load(file)
 
-    atlas['sources'][index]['permutations'] = {
+    atlas['sources'][0]['permutations'] = {
         item['name']: 'super_trim:trims/color_palettes/' + item['name']
-        for item in items()
+        for item in items(version)
     }
 
-    with path.open('x') as file:
+    with path.open('x', encoding='UTF-8') as file:
         dump(atlas, file, indent=2)
 
 
-def create_color_palettes(path: Path) -> None:
+def create_color_palettes(path: Path, version: str) -> None:
     """Creates and saves all color palettes in the given path"""
 
     refresh_dir(path)
 
-    for item in items():
-        color_palette(texture_path(item['texture'])).save(path / f'{item["name"]}.png')
+    for item in items(version):
+        color_palette(texture_path(item['texture'], version)).save(
+            path / f'{item["name"]}.png'
+        )
 
 
-def create_datapack(path: Path) -> None:
+def create_datapack(path: Path, version: str, pack_format: int) -> None:
     """Generates the data pack in the specified path"""
 
     with tqdm(
@@ -105,46 +112,53 @@ def create_datapack(path: Path) -> None:
     ) as pbar:
         refresh_dir(path)
 
-        pbar.update()
         pbar.postfix = 'Creating pack.mcmeta...'
-        create_mcmeta(path, 'Enables all items as armor trimming materials', 12)
-
         pbar.update()
-        pbar.postfix = 'Creating trim_materials.json...'
-        makedirs(path / 'data' / 'minecraft' / 'tags' / 'items')
-        create_tag(
-            path / 'data' / 'minecraft' / 'tags' / 'items' / 'trim_materials.json'
+        create_mcmeta(
+            path, 'Enables all items as armor trimming materials', pack_format
         )
 
+        pbar.postfix = 'Creating trim_materials.json...'
         pbar.update()
-        pbar.postfix = 'Creating materials...'
-        makedirs(path / 'data' / 'super_trim' / 'trim_material')
-        for item in items():
-            create_material(path / 'data' / 'super_trim' / 'trim_material', item)
+        makedirs(path / 'data' / 'minecraft' / 'tags' / 'items')
+        create_tag(
+            path / 'data' / 'minecraft' / 'tags' / 'items' / 'trim_materials.json',
+            version,
+        )
 
+        pbar.postfix = 'Creating materials...'
         pbar.update()
+        makedirs(path / 'data' / 'super_trim' / 'trim_material')
+        for item in items(version):
+            create_material(
+                path / 'data' / 'super_trim' / 'trim_material', item, version
+            )
+
         pbar.postfix = 'Creating pack.png...'
+        pbar.update()
         copyfile(ROOT / 'pack.png', path / 'pack.png')
 
-        pbar.update()
         pbar.postfix = 'Creating Super Trim.zip...'
-        with suppress(FileNotFoundError):
-            remove(ROOT / 'Super Trim.zip')
-        make_archive(str(ROOT / 'Super Trim'), 'zip', ROOT / 'datapack')
-
         pbar.update()
+        with suppress(FileNotFoundError):
+            remove(ROOT / 'Super-Trim.zip')
+        make_archive(str(ROOT / 'Super-Trim'), 'zip', ROOT / 'datapack')
+
         pbar.postfix = 'Datapack ready'
+        pbar.update()
 
 
-def create_lang(path: Path) -> None:
+def create_lang(path: Path, version: str) -> None:
     """Creates the lang file and saves it in the given path"""
 
-    with (MINECRAFT_ROOT / 'lang' / 'en_us.json').open() as file:
+    with (DATA_ROOT / version / 'assets' / 'minecraft' / 'lang' / 'en_us.json').open(
+        encoding='UTF-8'
+    ) as file:
         lang = load(file)
 
     result = {}
 
-    for item in items():
+    for item in items(version):
         try:
             display_name = lang['item.minecraft.' + item['name']]
         except KeyError:
@@ -155,14 +169,14 @@ def create_lang(path: Path) -> None:
 
         result['trim_material.minecraft.' + item['name']] = display_name + ' Material'
 
-    with path.open('x') as file:
+    with path.open('x', encoding='UTF-8') as file:
         dump(result, file, indent=2)
 
 
-def create_material(path: Path, item: Item) -> None:
+def create_material(path: Path, item: Item, version: str) -> None:
     """Creates a JSON material definition and saves it at the given directory"""
 
-    rgba = zip(*colors(texture_path(item['texture'])))
+    rgba = zip(*colors(texture_path(item['texture'], version)))
     rgba = tuple(sum(color_part) // len(color_part) for color_part in rgba)
 
     material = {
@@ -175,14 +189,14 @@ def create_material(path: Path, item: Item) -> None:
         'item_model_index': 1.0,
     }
 
-    with (path / f'{item["name"]}.json').open('x') as file:
+    with (path / f'{item["name"]}.json').open('x', encoding='UTF-8') as file:
         dump(material, file, indent=2)
 
 
 def create_mcmeta(path: Path, description: str, pack_format: int) -> None:
     """Saves a pack.mcmeta file at the given directory"""
 
-    with (path / 'pack.mcmeta').open('x') as file:
+    with (path / 'pack.mcmeta').open('x', encoding='UTF-8') as file:
         dump(
             {'pack': {'description': description, 'pack_format': pack_format}},
             file,
@@ -190,7 +204,7 @@ def create_mcmeta(path: Path, description: str, pack_format: int) -> None:
         )
 
 
-def create_resourcepack(path: Path) -> None:
+def create_resourcepack(path: Path, version: str, pack_format: int) -> None:
     """Generates the resource pack"""
 
     with tqdm(
@@ -200,72 +214,73 @@ def create_resourcepack(path: Path) -> None:
     ) as pbar:
         refresh_dir(path)
 
-        pbar.update()
         pbar.postfix = 'Creating pack.mcmeta...'
-        create_mcmeta(path, 'Resource pack for the Super Trim data pack', 12)
-
         pbar.update()
+        create_mcmeta(path, 'Resource pack for the Super Trim data pack', pack_format)
+
         pbar.postfix = 'Creating armor_trims.json...'
+        pbar.update()
         makedirs(path / 'assets' / 'minecraft' / 'atlases')
         create_atlas(
             path / 'assets' / 'minecraft' / 'atlases' / 'armor_trims.json',
             'armor_trims',
-            0,
+            version,
         )
 
-        pbar.update()
         pbar.postfix = 'Creating color palettes...'
+        pbar.update()
         makedirs(
             path / 'assets' / 'super_trim' / 'textures' / 'trims' / 'color_palettes'
         )
         create_color_palettes(
-            path / 'assets' / 'super_trim' / 'textures' / 'trims' / 'color_palettes'
+            path / 'assets' / 'super_trim' / 'textures' / 'trims' / 'color_palettes',
+            version,
         )
 
-        pbar.update()
         pbar.postfix = 'Creating en_us.json...'
-        makedirs(path / 'assets' / 'minecraft' / 'lang')
-        create_lang(path / 'assets' / 'minecraft' / 'lang' / 'en_us.json')
-
         pbar.update()
+        makedirs(path / 'assets' / 'minecraft' / 'lang')
+        create_lang(path / 'assets' / 'minecraft' / 'lang' / 'en_us.json', version)
+
         pbar.postfix = 'Creating pack.png...'
+        pbar.update()
         copyfile(ROOT / 'pack.png', path / 'pack.png')
 
+        pbar.postfix = 'Creating Super-Trim-Resources.zip...'
         pbar.update()
-        pbar.postfix = 'Creating Super Trim - Resources.zip...'
         with suppress(FileNotFoundError):
-            remove(ROOT / 'Super Trim - Resources.zip')
-        make_archive(str(ROOT / 'Super Trim - Resources'), 'zip', ROOT / 'resourcepack')
+            remove(ROOT / 'Super-Trim-Resources.zip')
+        make_archive(str(ROOT / 'Super-Trim-Resources'), 'zip', ROOT / 'resourcepack')
 
-        pbar.update()
         pbar.postfix = 'Resource pack ready'
+        pbar.update()
 
 
-def create_tag(path: Path) -> None:
+def create_tag(path: Path, version: str) -> None:
     """Creates a tag file for all the new materials at the given path"""
 
-    tag = {'values': ['minecraft:' + item['name'] for item in items()]}
+    tag = {'values': ['minecraft:' + item['name'] for item in items(version)]}
 
-    with path.open('x') as file:
+    with path.open('x', encoding='UTF-8') as file:
         dump(tag, file, indent=2)
 
 
-def items() -> Iterable[Item]:
-    """Returns all items in the game that aren't trim materials in vanilla"""
+def items(version: str) -> Iterable[Item]:
+    """Returns all items in a game version that aren't trim materials in vanilla"""
 
     with (
-        ROOT
-        / 'update_1_20'
+        DATA_ROOT
+        / version
         / 'data'
         / 'minecraft'
         / 'tags'
         / 'items'
         / 'trim_materials.json'
-    ).open() as file:
+    ).open(encoding='UTF-8') as file:
         blacklist: list[str] = load(file)['values']
     blacklist.append('minecraft:air')
 
-    with (SRC_ROOT / 'items.json').open() as file:
+    with (OUT_ROOT / version / 'items_textures.json').open(encoding='UTF-8') as file:
         item_list: list[Item] = load(file)
         return (
             item for item in item_list if 'minecraft:' + item['name'] not in blacklist
@@ -279,17 +294,21 @@ def refresh_dir(path: Path) -> None:
     path.mkdir()
 
 
-def texture_path(namespaced_path: str) -> Path:
+def texture_path(namespaced_path: str, version: str) -> Path:
     """Gets an actual path from a namespaced texture path"""
 
     try:
-        namespace, rest = namespaced_path.split(':')
-    except ValueError:
-        namespace, rest = 'minecraft', namespaced_path
-    path = Path(rest + '.png')
-    return ROOT / namespace / 'textures' / path
+        path = namespaced_path.split(':')[1]
+    except IndexError:
+        path = namespaced_path
+    path = Path(path + '.png')
+
+    if path.parts[0] == 'block':
+        path = Path('blocks', *path.parts[1:])
+
+    return OUT_ROOT / version / path
 
 
 if __name__ == '__main__':
-    create_datapack(ROOT / 'datapack')
-    create_resourcepack(ROOT / 'resourcepack')
+    create_datapack(ROOT / 'datapack', argv[1], 15)
+    create_resourcepack(ROOT / 'resourcepack', argv[1], 15)

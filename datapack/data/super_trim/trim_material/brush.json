@@ -1,0 +1,9 @@
+{
+  "asset_name": "brush",
+  "description": {
+    "color": "#986B4C",
+    "translate": "trim_material.minecraft.brush"
+  },
+  "ingredient": "minecraft:brush",
+  "item_model_index": 1.0
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "arms_up_pottery_sherd",
+  "description": {
+    "color": "#703F33",
+    "translate": "trim_material.minecraft.arms_up_pottery_sherd"
+  },
+  "ingredient": "minecraft:arms_up_pottery_sherd",
+  "item_model_index": 1.0
+}

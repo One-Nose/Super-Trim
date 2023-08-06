@@ -1,0 +1,9 @@
+{
+  "asset_name": "plenty_pottery_sherd",
+  "description": {
+    "color": "#703F33",
+    "translate": "trim_material.minecraft.plenty_pottery_sherd"
+  },
+  "ingredient": "minecraft:plenty_pottery_sherd",
+  "item_model_index": 1.0
+}

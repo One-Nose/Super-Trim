@@ -1,0 +1,9 @@
+{
+  "asset_name": "cherry_door",
+  "description": {
+    "color": "#DFB0A9",
+    "translate": "trim_material.minecraft.cherry_door"
+  },
+  "ingredient": "minecraft:cherry_door",
+  "item_model_index": 1.0
+}

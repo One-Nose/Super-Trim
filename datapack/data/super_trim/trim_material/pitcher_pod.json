@@ -1,0 +1,9 @@
+{
+  "asset_name": "pitcher_pod",
+  "description": {
+    "color": "#875B3F",
+    "translate": "trim_material.minecraft.pitcher_pod"
+  },
+  "ingredient": "minecraft:pitcher_pod",
+  "item_model_index": 1.0
+}

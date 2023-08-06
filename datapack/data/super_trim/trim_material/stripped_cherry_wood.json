@@ -1,0 +1,9 @@
+{
+  "asset_name": "stripped_cherry_wood",
+  "description": {
+    "color": "#D48E90",
+    "translate": "trim_material.minecraft.stripped_cherry_wood"
+  },
+  "ingredient": "minecraft:stripped_cherry_wood",
+  "item_model_index": 1.0
+}

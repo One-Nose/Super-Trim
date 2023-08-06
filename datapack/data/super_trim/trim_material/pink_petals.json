@@ -1,0 +1,9 @@
+{
+  "asset_name": "pink_petals",
+  "description": {
+    "color": "#DCA4AB",
+    "translate": "trim_material.minecraft.pink_petals"
+  },
+  "ingredient": "minecraft:pink_petals",
+  "item_model_index": 1.0
+}

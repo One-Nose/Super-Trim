@@ -1,0 +1,9 @@
+{
+  "asset_name": "sheaf_pottery_sherd",
+  "description": {
+    "color": "#703F33",
+    "translate": "trim_material.minecraft.sheaf_pottery_sherd"
+  },
+  "ingredient": "minecraft:sheaf_pottery_sherd",
+  "item_model_index": 1.0
+}

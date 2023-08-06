@@ -1,0 +1,9 @@
+{
+  "asset_name": "cherry_log",
+  "description": {
+    "color": "#A57B7A",
+    "translate": "trim_material.minecraft.cherry_log"
+  },
+  "ingredient": "minecraft:cherry_log",
+  "item_model_index": 1.0
+}

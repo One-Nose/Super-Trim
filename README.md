@@ -4,12 +4,12 @@ A Minecraft datapack that enables all items as valid armor trimming materials.
 
 A new update recently allowed us to trim armor using ten different materials. Using this data pack, you will be able to use ANY ITEM YOU WANT!
 
-
 ### Credit
+
 This project uses an abridged version of [minecraft-jar-extractor](https://github.com/PrismarineJS/minecraft-jar-extractor).
 
-
 ## Usage instructions
+
 In order to use this data pack, first go to the [releases](https://github.com/One-Nose/Super-Trim/releases) page and choose your desired version. It is recommended to choose the latest version that supports your desired Minecraft version.
 
 Some versions require you to enable the experimental data pack - that would be specified in the release page. If it's not specified you can skip this step. You can enable the experimental data pack when creating a new world from the **Data Packs** menu.
@@ -23,3 +23,23 @@ Then, add the data pack (`Super-Trims.zip`) like any other data pack ([instructi
 -   Spawn eggs and leaves trim armor in shades of gray.
 -   Blocks with different sides only use one side to determine how the trim would look.
 -   Dark materials make unreadable descriptions.
+
+### Building
+
+To build this data pack yourself, you'll need NodeJS and Python installed. First extract the desired minecraft version:
+
+```
+cd extractor
+npm install
+node image_names.js <version>
+cd ..
+```
+
+Then, execute the main file:
+
+```
+python -m venv .venv
+.venv/Scripts/activate
+pip install -r requirements.txt
+python src/main.py <version>
+```

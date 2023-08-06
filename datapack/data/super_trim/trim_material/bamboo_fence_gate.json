@@ -1,7 +1,7 @@
 {
   "asset_name": "bamboo_fence_gate",
   "description": {
-    "color": "#C3B053",
+    "color": "#CAB753",
     "translate": "trim_material.minecraft.bamboo_fence_gate"
   },
   "ingredient": "minecraft:bamboo_fence_gate",

@@ -1,0 +1,9 @@
+{
+  "asset_name": "suspicious_sand",
+  "description": {
+    "color": "#DBCEA1",
+    "translate": "trim_material.minecraft.suspicious_sand"
+  },
+  "ingredient": "minecraft:suspicious_sand",
+  "item_model_index": 1.0
+}

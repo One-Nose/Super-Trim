@@ -1,0 +1,9 @@
+{
+  "asset_name": "suspicious_gravel",
+  "description": {
+    "color": "#898382",
+    "translate": "trim_material.minecraft.suspicious_gravel"
+  },
+  "ingredient": "minecraft:suspicious_gravel",
+  "item_model_index": 1.0
+}

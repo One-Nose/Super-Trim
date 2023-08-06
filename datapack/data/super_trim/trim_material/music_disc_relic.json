@@ -1,0 +1,9 @@
+{
+  "asset_name": "music_disc_relic",
+  "description": {
+    "color": "#716767",
+    "translate": "trim_material.minecraft.music_disc_relic"
+  },
+  "ingredient": "minecraft:music_disc_relic",
+  "item_model_index": 1.0
+}

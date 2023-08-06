@@ -1,0 +1,9 @@
+{
+  "asset_name": "cherry_sapling",
+  "description": {
+    "color": "#956880",
+    "translate": "trim_material.minecraft.cherry_sapling"
+  },
+  "ingredient": "minecraft:cherry_sapling",
+  "item_model_index": 1.0
+}

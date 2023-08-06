@@ -1,0 +1,9 @@
+{
+  "asset_name": "shaper_armor_trim_smithing_template",
+  "description": {
+    "color": "#506C69",
+    "translate": "trim_material.minecraft.shaper_armor_trim_smithing_template"
+  },
+  "ingredient": "minecraft:shaper_armor_trim_smithing_template",
+  "item_model_index": 1.0
+}
