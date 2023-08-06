@@ -1,6 +1,10 @@
 {
   "pack": {
     "description": "Enables all items as armor trimming materials",
-    "pack_format": 15
+    "pack_format": 15,
+    "supported_formats": {
+      "min_inclusive": 15,
+      "max_inclusive": 16
+    }
   }
 }

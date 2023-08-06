@@ -1,6 +1,10 @@
 {
   "pack": {
     "description": "Resource pack for the Super Trim data pack",
-    "pack_format": 15
+    "pack_format": 15,
+    "supported_formats": {
+      "min_inclusive": 15,
+      "max_inclusive": 16
+    }
   }
 }

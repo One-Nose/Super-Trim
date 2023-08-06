@@ -36,6 +36,14 @@ class Item(TypedDict):
     texture: str
 
 
+class MCMetaPack(TypedDict, total=False):
+    """The 'pack' field of a pack.mcmeta file"""
+
+    pack_format: int
+    description: str
+    supported_formats: int | list[int] | dict[str, int]
+
+
 def color_palette(texture: Path) -> Image.Image:
     """Creates an 8-pixels color palette of a given texture"""
 
@@ -102,7 +110,12 @@ def create_color_palettes(path: Path, version: str) -> None:
         )
 
 
-def create_datapack(path: Path, version: str, pack_format: int) -> None:
+def create_datapack(
+    path: Path,
+    version: str,
+    pack_format: int,
+    supported_formats: tuple[int, int] | None = None,
+) -> None:
     """Generates the data pack in the specified path"""
 
     with tqdm(
@@ -115,7 +128,10 @@ def create_datapack(path: Path, version: str, pack_format: int) -> None:
         pbar.postfix = 'Creating pack.mcmeta...'
         pbar.update()
         create_mcmeta(
-            path, 'Enables all items as armor trimming materials', pack_format
+            path,
+            'Enables all items as armor trimming materials',
+            pack_format,
+            supported_formats,
         )
 
         pbar.postfix = 'Creating trim_materials.json...'
@@ -193,18 +209,30 @@ def create_material(path: Path, item: Item, version: str) -> None:
         dump(material, file, indent=2)
 
 
-def create_mcmeta(path: Path, description: str, pack_format: int) -> None:
+def create_mcmeta(
+    path: Path,
+    description: str,
+    pack_format: int,
+    supported_formats: tuple[int, int] | None = None,
+) -> None:
     """Saves a pack.mcmeta file at the given directory"""
 
     with (path / 'pack.mcmeta').open('x', encoding='UTF-8') as file:
-        dump(
-            {'pack': {'description': description, 'pack_format': pack_format}},
-            file,
-            indent=2,
-        )
+        pack: MCMetaPack = {'description': description, 'pack_format': pack_format}
+        if supported_formats:
+            pack['supported_formats'] = {
+                'min_inclusive': supported_formats[0],
+                'max_inclusive': supported_formats[1],
+            }
+        dump({'pack': pack}, file, indent=2)
 
 
-def create_resourcepack(path: Path, version: str, pack_format: int) -> None:
+def create_resourcepack(
+    path: Path,
+    version: str,
+    pack_format: int,
+    supported_formats: tuple[int, int] | None = None,
+) -> None:
     """Generates the resource pack"""
 
     with tqdm(
@@ -216,7 +244,12 @@ def create_resourcepack(path: Path, version: str, pack_format: int) -> None:
 
         pbar.postfix = 'Creating pack.mcmeta...'
         pbar.update()
-        create_mcmeta(path, 'Resource pack for the Super Trim data pack', pack_format)
+        create_mcmeta(
+            path,
+            'Resource pack for the Super Trim data pack',
+            pack_format,
+            supported_formats,
+        )
 
         pbar.postfix = 'Creating armor_trims.json...'
         pbar.update()
@@ -310,5 +343,5 @@ def texture_path(namespaced_path: str, version: str) -> Path:
 
 
 if __name__ == '__main__':
-    create_datapack(ROOT / 'datapack', argv[1], 15)
-    create_resourcepack(ROOT / 'resourcepack', argv[1], 15)
+    create_datapack(ROOT / 'datapack', argv[1], 15, (15, 16))
+    create_resourcepack(ROOT / 'resourcepack', argv[1], 15, (15, 16))
