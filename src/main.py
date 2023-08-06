@@ -122,6 +122,7 @@ def create_datapack(
         total=6,
         bar_format='{l_bar}{bar:50}| {n_fmt}/{total_fmt}{postfix}',
         postfix='Preparing datapack...',
+        mininterval=0,
     ) as pbar:
         refresh_dir(path)
 
@@ -239,6 +240,7 @@ def create_resourcepack(
         total=7,
         bar_format='{l_bar}{bar:50}| {n_fmt}/{total_fmt}{postfix}',
         postfix='Preparing resource pack...',
+        mininterval=0,
     ) as pbar:
         refresh_dir(path)
 
