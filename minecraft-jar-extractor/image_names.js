@@ -4,14 +4,14 @@ const fs = require('fs-extra')
 const path = require('path')
 const getMinecraftFiles = require('./get_minecraft_files')
 
-if (process.argv.length !== 5) {
-  console.log('Usage : node image_names.js <version1,version2,...> <output_dir> <temporary_dir>')
+if (process.argv.length !== 3) {
+  console.log('Usage : node image_names.js <version1,version2,...> [<output_dir>] [<temporary_dir>]')
   process.exit(1)
 }
 
 const minecraftVersions = process.argv[2].split(',')
-const outputDir = path.resolve(process.argv[3])
-const temporaryDir = path.resolve(process.argv[4])
+const outputDir = path.resolve(process.argv[3] ?? 'minecraft_extracted_data')
+const temporaryDir = path.resolve(process.argv[4] ?? 'temp')
 
 const MultiProgress = require('multi-progress')
 const multibar = new MultiProgress()
