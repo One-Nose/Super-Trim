@@ -11,7 +11,7 @@ In order to use this data pack, first go to the [releases](https://github.com/On
 
 Some versions require you to enable the experimental data pack - that would be specified in the release page. If it's not specified you can skip this step. You can enable the experimental data pack when creating a new world from the **Data Packs** menu.
 
-Then, add this data pack like any other data pack ([instructions](https://www.planetminecraft.com/blog/how-to-download-and-install-minecraft-data-packs/)). **You also have to download and use the resource pack, otherwise the data pack won't work.** Then, pick up a smithing table, an armor trimming smithing template, any supported piece of armor and any item you want and trim your armor (see the picture)!
+Then, add the data pack (`Super-Trims.zip`) like any other data pack ([instructions](https://www.planetminecraft.com/blog/how-to-download-and-install-minecraft-data-packs/)). **You also have to download and use the resource pack (`Super-Trim-Resources.zip`), otherwise the data pack won't work.** Then, pick up a smithing table, an armor trimming smithing template, any supported piece of armor and any item you want and trim your armor (see the picture)!
 
 ## Limitations (aka bugs I didn't bother to solve)
 - Armor trimmed using the data pack has a purple trim texture in the inventory instead of its actual color.
