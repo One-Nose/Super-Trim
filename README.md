@@ -20,7 +20,7 @@ Then, add the data pack (`Super-Trims.zip`) like any other data pack ([instructi
 
 -   Armor trimmed using the data pack has a purple trim texture in the inventory instead of its actual color.
 -   Shift+click in the smithing table UI sometimes doesn't work.
--   Spawn eggs and leaves trim armor in shades of gray.
+-   Certain items such as spawn eggs and leaves trim the armor inaccurately.
 -   Blocks with different sides only use one side to determine how the trim would look.
 -   Dark materials make unreadable descriptions.
 
