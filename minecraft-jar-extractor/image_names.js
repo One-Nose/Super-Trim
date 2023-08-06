@@ -324,6 +324,8 @@ function generateTextureContent (outputDir) {
 }
 
 function extract (minecraftVersion, outputDir, temporaryDir, cb) {
+  if (require('minecraft-data')(minecraftVersion) === null) throw 'Bad version: ' + minecraftVersion
+
   const bar = multibar.newBar(
     `progress [:bar] :percent | Version: ${minecraftVersion} | :current/:total | :action`,
     { width: 50, total: 7, renderThrottle: 0 }
