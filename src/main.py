@@ -8,6 +8,7 @@ from shutil import copyfile, make_archive, rmtree
 from typing import Iterable, Sequence, TypedDict
 
 from PIL import Image
+from tqdm import tqdm
 
 ROOT = abspath('.')
 
@@ -101,30 +102,42 @@ def create_color_palettes(path: str) -> None:
 def create_datapack(path: str) -> None:
     """Generates the data pack in the specified path"""
 
-    print('Preparing datapack...')
-    refresh_dir(path)
+    with tqdm(
+        total=6,
+        bar_format='{l_bar}{bar:50}| {n_fmt}/{total_fmt}{postfix}',
+        postfix='Preparing datapack...',
+    ) as pbar:
+        refresh_dir(path)
 
-    print('Creating pack.mcmeta...')
-    create_mcmeta(path, 'Enables all items as armor trimming materials', 11)
+        pbar.update()
+        pbar.postfix = 'Creating pack.mcmeta...'
+        create_mcmeta(path, 'Enables all items as armor trimming materials', 11)
 
-    print('Creating trim_materials.json...')
-    makedirs(join(path, 'data', 'minecraft', 'tags', 'items'))
-    create_tag(join(path, 'data', 'minecraft', 'tags', 'items', 'trim_materials.json'))
+        pbar.update()
+        pbar.postfix = 'Creating trim_materials.json...'
+        makedirs(join(path, 'data', 'minecraft', 'tags', 'items'))
+        create_tag(
+            join(path, 'data', 'minecraft', 'tags', 'items', 'trim_materials.json')
+        )
 
-    print('Creating materials...')
-    makedirs(join(path, 'data', 'super_trim', 'trim_material'))
-    for item in items():
-        create_material(join(path, 'data', 'super_trim', 'trim_material'), item)
+        pbar.update()
+        pbar.postfix = 'Creating materials...'
+        makedirs(join(path, 'data', 'super_trim', 'trim_material'))
+        for item in items():
+            create_material(join(path, 'data', 'super_trim', 'trim_material'), item)
 
-    print('Creating pack.png...')
-    copyfile(join(ROOT, 'pack.png'), join(path, 'pack.png'))
+        pbar.update()
+        pbar.postfix = 'Creating pack.png...'
+        copyfile(join(ROOT, 'pack.png'), join(path, 'pack.png'))
 
-    print('Creating Super Trim.zip...')
-    with suppress(FileNotFoundError):
-        remove(join(ROOT, 'Super Trim.zip'))
-    make_archive(join(ROOT, 'Super Trim'), 'zip', join(ROOT, 'datapack'))
+        pbar.update()
+        pbar.postfix = 'Creating Super Trim.zip...'
+        with suppress(FileNotFoundError):
+            remove(join(ROOT, 'Super Trim.zip'))
+        make_archive(join(ROOT, 'Super Trim'), 'zip', join(ROOT, 'datapack'))
 
-    print('Datapack ready')
+        pbar.update()
+        pbar.postfix = 'Datapack ready'
 
 
 def create_lang(path: str) -> None:
@@ -184,41 +197,54 @@ def create_mcmeta(path: str, description: str, pack_format: int) -> None:
 def create_resourcepack(path: str) -> None:
     """Generates the resource pack"""
 
-    print('Preparing resource pack...')
-    refresh_dir(path)
+    with tqdm(
+        total=7,
+        bar_format='{l_bar}{bar:50}| {n_fmt}/{total_fmt}{postfix}',
+        postfix='Preparing resource pack...',
+    ) as pbar:
+        refresh_dir(path)
 
-    print('Creating pack.mcmeta...')
-    create_mcmeta(path, 'Resource pack for the Super Trim data pack', 12)
+        pbar.update()
+        pbar.postfix = 'Creating pack.mcmeta...'
+        create_mcmeta(path, 'Resource pack for the Super Trim data pack', 12)
 
-    print('Creating armor_trims.json...')
-    makedirs(join(path, 'assets', 'minecraft', 'atlases'))
-    create_atlas(
-        join(path, 'assets', 'minecraft', 'atlases', 'armor_trims.json'),
-        'armor_trims',
-        0,
-    )
+        pbar.update()
+        pbar.postfix = 'Creating armor_trims.json...'
+        makedirs(join(path, 'assets', 'minecraft', 'atlases'))
+        create_atlas(
+            join(path, 'assets', 'minecraft', 'atlases', 'armor_trims.json'),
+            'armor_trims',
+            0,
+        )
 
-    print('Creating color palettes...')
-    makedirs(join(path, 'assets', 'super_trim', 'textures', 'trims', 'color_palettes'))
-    create_color_palettes(
-        join(path, 'assets', 'super_trim', 'textures', 'trims', 'color_palettes')
-    )
+        pbar.update()
+        pbar.postfix = 'Creating color palettes...'
+        makedirs(
+            join(path, 'assets', 'super_trim', 'textures', 'trims', 'color_palettes')
+        )
+        create_color_palettes(
+            join(path, 'assets', 'super_trim', 'textures', 'trims', 'color_palettes')
+        )
 
-    print('Creating en_us.json...')
-    makedirs(join(path, 'assets', 'minecraft', 'lang'))
-    create_lang(join(path, 'assets', 'minecraft', 'lang', 'en_us.json'))
+        pbar.update()
+        pbar.postfix = 'Creating en_us.json...'
+        makedirs(join(path, 'assets', 'minecraft', 'lang'))
+        create_lang(join(path, 'assets', 'minecraft', 'lang', 'en_us.json'))
 
-    print('Creating pack.png...')
-    copyfile(join(ROOT, 'pack.png'), join(path, 'pack.png'))
+        pbar.update()
+        pbar.postfix = 'Creating pack.png...'
+        copyfile(join(ROOT, 'pack.png'), join(path, 'pack.png'))
 
-    print('Creating Super Trim - Resources.zip...')
-    with suppress(FileNotFoundError):
-        remove(join(ROOT, 'Super Trim - Resources.zip'))
-    make_archive(
-        join(ROOT, 'Super Trim - Resources'), 'zip', join(ROOT, 'resourcepack')
-    )
+        pbar.update()
+        pbar.postfix = 'Creating Super Trim - Resources.zip...'
+        with suppress(FileNotFoundError):
+            remove(join(ROOT, 'Super Trim - Resources.zip'))
+        make_archive(
+            join(ROOT, 'Super Trim - Resources'), 'zip', join(ROOT, 'resourcepack')
+        )
 
-    print('Resource pack ready')
+        pbar.update()
+        pbar.postfix = 'Resource pack ready'
 
 
 def create_tag(path: str) -> None:
