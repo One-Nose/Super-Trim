@@ -111,7 +111,7 @@ def create_datapack(path: str) -> None:
 
         pbar.update()
         pbar.postfix = 'Creating pack.mcmeta...'
-        create_mcmeta(path, 'Enables all items as armor trimming materials', 11)
+        create_mcmeta(path, 'Enables all items as armor trimming materials', 12)
 
         pbar.update()
         pbar.postfix = 'Creating trim_materials.json...'
