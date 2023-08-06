@@ -41,5 +41,5 @@ Then, execute the main file:
 python -m venv .venv
 .venv/Scripts/activate
 pip install -r requirements.txt
-python src/main.py <version>
+python src/main.py [<version>]
 ```
