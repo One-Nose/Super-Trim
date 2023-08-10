@@ -6,7 +6,7 @@ from os import makedirs, remove
 from pathlib import Path
 from shutil import copyfile, make_archive, rmtree
 from sys import argv
-from typing import Iterable, Sequence, TypedDict
+from typing import Iterable, Sequence, TypedDict, cast
 
 from PIL import Image
 from tqdm import tqdm
@@ -67,7 +67,7 @@ def color_palette(texture: Path) -> Image.Image:
         data.insert(index, tuple(sum(color_part) // 2 for color_part in zip(*pixels)))
 
     result = Image.new('RGBA', (8, 1))
-    result.putdata(data)
+    result.putdata(data)  # type: ignore
     return result
 
 
@@ -75,7 +75,9 @@ def colors(texture: Path) -> set[tuple[int, int, int, int]]:
     """Gets all unique colors in a given texture"""
 
     with Image.open(texture) as image:
-        data: Sequence[tuple[int, int, int, int]] = image.convert('RGBA').getdata()
+        data = cast(
+            Sequence[tuple[int, int, int, int]], image.convert('RGBA').getdata()  # type: ignore
+        )
     return set(color for color in data if color[3] > 0)
 
 
