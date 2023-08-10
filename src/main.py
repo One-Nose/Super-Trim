@@ -345,5 +345,5 @@ def texture_path(namespaced_path: str, version: str) -> Path:
 
 
 if __name__ == '__main__':
-    create_datapack(ROOT / 'datapack', argv[1], 15, (15, 16))
-    create_resourcepack(ROOT / 'resourcepack', argv[1], 15, (15, 16))
+    create_datapack(ROOT / 'datapack', argv[1], 15, (15, 17))
+    create_resourcepack(ROOT / 'resourcepack', argv[1], 15, (15, 17))
