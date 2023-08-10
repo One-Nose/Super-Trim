@@ -12,7 +12,7 @@ This project uses an abridged version of [minecraft-jar-extractor](https://githu
 
 In order to use this data pack, first go to the [releases](https://github.com/One-Nose/Super-Trim/releases) page and choose your desired version. It is recommended to choose the latest version that supports your desired Minecraft version.
 
-Some versions require you to enable the experimental data pack - that would be specified in the release page. If it's not specified you can skip this step. You can enable the experimental data pack when creating a new world from the **Data Packs** menu.
+> If you're using a earlier version that Super Trim 2.0.0,you must enable the experimental data pack first. You can enable the experimental data pack when creating a new world from the **Data Packs** menu.
 
 Then, add the data pack (`Super-Trims.zip`) like any other data pack ([instructions](https://www.planetminecraft.com/blog/how-to-download-and-install-minecraft-data-packs/)). **You also have to download and use the resource pack (`Super-Trim-Resources.zip`), otherwise the data pack won't work.** Then, pick up a smithing table, an armor trimming smithing template, any supported piece of armor and any item you want and trim your armor (see the picture)!
 
